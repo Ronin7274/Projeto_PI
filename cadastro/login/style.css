@@ -1,0 +1,78 @@
+
+body {
+   background-image: url('../../imagens/2.png');
+   background-size: 1366px; 
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: rgba(61, 61, 61, 0.5);
+    color: #f1f1f1;
+    
+}
+
+.btn-primary {
+    background-color: #858585;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #858585;
+}
+
+.input-group-text {
+    background-color:#858585;
+    border-right: none;
+}
+
+.form-control {
+    border-left: none;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #0d6300;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.button
+{
+   background-color: black;
+}
