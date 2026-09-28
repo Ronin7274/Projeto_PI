@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Cursos</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="img/InsertVLogo.jpeg" alt="Logo do Projeto Integrador" width="100">
+            <center>
+            <a href="inicio.html">Início</a>
+            <a href="painelvagas.html">Vagas</a>
+            <a href="painelcursos.html">Cursos</a>
+            <a href="#">Painel</a>
+            </center>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Cursos</h2> <!--Barra lateral de interação-->
+            <p><u>Explorar Cursos</u></p>
+            <p><u>Meus Cursos</u></p>
+            <p><u>Cursos Favoritos</u></p>
+        </section>
+        
+        <section>
+            <h1>Todos os Cursos</h1> <!--Conteúdo central da página(por isso esse é h1 e o outro não)-->
+            <label for="Pesquisa">Buscar Cursos:</label> <!--Tentar adicionar o simbolo da lupa de pesquisa-->
+            <input type="search" name="Pesquisa" placeholder="Pesquisar..." required>
+
+            <label for="Filtro">Filtrar por:</label>
+            <select name="Filtro" id="Filtro">
+                <option value="all">Todas</option>
+                <option value="htmlcss">HTML e CSS</option>
+                <option value="design">Design Digital</option>
+                <option value="marketing">Marketing</option>
+                <option value="cosmetico">Cosméticos</option>
+                <option value="Python">Python</option>
+            </select>
+        </section>
+
+        <section>
+            <h3>Curso 1</h3> <!--Título do curso-->
+            <p>Descrição do curso 1...</p> <!--Descrição do curso, como duração, matérias e etc.-->
+            <button>Inscrever-se</button> <u>Publicado há 2 dias</u>
+
+            <h3>Curso 2</h3>
+            <p>Descrição do curso 2...</p>
+            <button>Inscrever-se</button> <u>Publicado há 4 dias</u>
+
+            <h3>Curso 3</h3> 
+            <p>Descrição do curso 3...</p>
+            <button>Inscrever-se</button> <u>Publicado há 6 dias</u>
+        </section>
+    </main>
+    
+   <footer>
+        <br>
+        <a href="#">Política e Termos de uso, &copy; 2026 InsertV. Todos os direitos reservados.</a>
+    </footer>
+</body>
+</html>

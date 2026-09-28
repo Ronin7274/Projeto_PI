@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Vagas</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="img/InsertVLogo.jpeg" alt="Logo do Projeto Integrador" width="100">
+            <center>
+            <a href="inicio.html">Início</a>
+            <a href="painelvagas.html">Vagas</a>
+            <a href="painelcursos.html">Cursos</a>
+            <a href="#">Painel</a>
+            </center>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Vagas</h2> <!--Barra lateral de interação-->
+            <p><u>Explorar Vagas</u></p>
+            <p><u>Minhas Candidaturas</u></p>
+            <p><u>Vagas Favoritas</u></p>
+        </section>
+        
+        <section>
+            <h1>Todas as Vagas</h1> <!--Conteúdo central da página(por isso esse é h1 e o outro não)-->
+            <label for="Pesquisa">Pesquisar Vagas:</label> <!--Tentar adicionar o simbolo da lupa de pesquisa-->
+            <input type="search" name="Pesquisa" placeholder="Pesquisar..." required>
+
+            <label for="Filtro">Filtrar por:</label>
+            <select name="Filtro" id="Filtro">
+                <option value="all">Todas</option>
+                <option value="tech">Tecnologia</option>
+                <option value="design">Design</option>
+                <option value="marketing">Marketing</option>
+                <option value="cosmetico">Cosméticos</option>
+            </select>
+
+            <label for="Tipo">Tipo:</label>
+            <select name="Tipo" id="Tipo">
+                <option value="all">Todos</option>
+                <option value="fulltime">Tempo Integral</option>
+                <option value="parttime">Meio Período</option>
+                <option value="internship">Estágio</option>
+            </select>
+        </section>
+
+        <section>
+            <h3>Vaga 1</h3> <!--Vaga referente a tal função-->
+            <p>Descrição da vaga 1...</p> <!--Descrição da vaga, como localização, benefícios, etc.-->
+            <button>Candidatar-se</button> <u>Publicada há 2 dias</u>
+
+            <h3>Vaga 2</h3>
+            <p>Descrição da vaga 2...</p>
+            <button>Candidatar-se</button> <u>Publicada há 5 dias</u>
+
+            <h3>Vaga 3</h3> 
+            <p>Descrição da vaga 3...</p>
+            <button>Candidatar-se</button> <u>Publicada há 1 semana</u>
+        </section>
+    </main>
+    
+   <footer>
+        <br>
+        <a href="#">Política e Termos de uso, &copy; 2026 InsertV. Todos os direitos reservados.</a>
+    </footer>
+</body>
+</html>
