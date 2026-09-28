@@ -1,0 +1,23 @@
+[
+    {
+        "login":{
+            "email":"carlos@gmail.com",
+            "senha":"carlos123"
+        },
+        "cursos":{
+            "titulo":"design avançado",
+            "descricao":"curso para ensinar design avançado",
+            "tipo":"design",
+            "dt_publicacao":"01-01-2027",
+            "inscrito":"sim"
+        },
+        "vagas":{
+            "titulo":"vaga de designer",
+            "descricao":"vaga para design avançado",
+            "tipo":"design",
+            "carga_horaria":"meio_periodo",
+            "dt_publicacao":"02-02-2027",
+            "inscrito":"sim"
+        }
+    }
+]
