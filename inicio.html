@@ -4,18 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Integrador</title>
+    <link rel="icon" href="img/InsertVLogopng.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
     <header>
-        <nav> <!-- Navegação do cabeçalho é melhor no canto direito da tela -->
-            <img src="https://via.placeholder.com/100" alt="Logo do Projeto Integrador" width="100">
-            <center> <!-- Imagem para ficar na mesma linha do NAV-->
-            <a href="#">Início</a>
-            <a href="painelvagas.html">Vagas</a>
-            <a href="painelcursos.html">Cursos</a>
-            <a href="#">Sobre</a>
-            <a href="#">Contato</a>
-            </center>
+        <nav> <!-- Navegação do cabeçalho -->
+            <div class="img">
+            <img src="img/InsertVLogo.jpeg" alt="Logo do Projeto Integrador" width="100">
+            </div>
+
+            <div id="nav">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="painelvagas.html">Vagas</a></li>
+                    <li><a href="painelcursos.html">Cursos</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="s">
+                <button id="entrar"><a href="login.html">Entrar</a></button>
+                <button id="botao-azul"><a id="cadastrar" href="">Cadastrar</a></button>
+            </div>
         </nav>
     </header>
   
@@ -24,24 +38,46 @@
             <h1>Conecte-se ao <br>seu futuro profissional</h1>
             <p>Encontre vagas, aprenda novas habilidades<br> e conquiste experiências para crescer<br> na carreira.</p> <!--Imagem ao lado direito desse texto-->
            
-            <button>Buscar Vagas</button>
+            <button id="b_azul">Buscar Vagas</button>
             <button>Ver Cursos</button> <br><br>
-            <button><a href="login.html">Entrar</a></button> <!--Botão de login seria melhor colocado no canto superior direito -->
         </section>
+ 
+        <section id="funcionalidades">   
+        <h2>Como funciona</h2>
 
-        <section>
-            <br>
-            <center><h2>Como funciona</h2></center><!--Deixar o h2 centralizado e os três parágrafos abaixos em cada canto da mesma linha-->
-            <p><u>Encontre Vagas</u></p> <!--Lado direito-->
-            <p><u>Faça Cursos</u></p> <!--Centro-->
-            <p><u>Conquiste Experiências</u></p> <!--Lado esquerdo-->
-        </section>
+        <div class="passos">
 
+            <div class="passo">
+                <div class="icone">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <h3><a href="#">Encontre vagas</a></h3>
+                <p>Busque oportunidades que combinam com você.</p>
+            </div>
+
+            <div class="passo">
+                <div class="icone">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <h3><a href="#">Faça cursos</a></h3>
+                <p>Aprenda e desenvolva novas habilidades.</p>
+            </div>
+
+            <div class="passo">
+                <div class="icone">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <h3><a href="#">Ganhe experiência</a></h3>
+                <p>Participe de projetos e conquiste experiência prática.</p>
+            </div>
+
+        </div>
     </main>
     
    <footer>
         <br>
         <a href="#">Política e Termos de uso, &copy; 2026 InsertV. Todos os direitos reservados.</a>
     </footer>
+
 </body>
 </html>
