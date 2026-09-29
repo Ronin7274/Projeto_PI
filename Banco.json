@@ -1,23 +1,46 @@
-[
-    {
-        "login":{
+{
+    "carga_horaria":[
+        {"id_carga_horaria":1, "nome":"meio periodo"},
+        {"id_carga_horaria":2, "nome":"integral"},
+        {"id_carga_horaria":3, "nome":"estágio"}
+    ],
+    "usuario":[
+        {
+            "id_usuarios":1,
+            "nome":"carlos",
             "email":"carlos@gmail.com",
             "senha":"carlos123"
-        },
-        "cursos":{
+        }
+    ],
+    "empresa":[
+        {
+            "id_empresa":2,
+            "nome":"carlos empresa",
+            "email":"carlos_empresa@gmail.com",
+            "senha":"carlosEmpresa123",
+            "cnpj":"01.143.186/0001-09"
+        }
+    ],
+    "cursos":[
+        {
+            "id_cursos":4,
             "titulo":"design avançado",
             "descricao":"curso para ensinar design avançado",
             "tipo":"design",
             "dt_publicacao":"01-01-2027",
-            "inscrito":"sim"
-        },
-        "vagas":{
-            "titulo":"vaga de designer",
-            "descricao":"vaga para design avançado",
-            "tipo":"design",
-            "carga_horaria":"meio_periodo",
-            "dt_publicacao":"02-02-2027",
-            "inscrito":"sim"
+            "inscrito":"true"
         }
-    }
-]
+    ],
+    "vagas":[
+        {
+            "id_vagas":5,
+            "id_empresa":2,
+            "titulo":"vaga de designer",
+            "tipo":"design",
+            "descricao":"vaga para design avançado",
+            "dt_publicacao":"02-02-2027",
+            "id_carga_horaria":3,
+            "inscrito":"false"
+        }
+    ]
+}
