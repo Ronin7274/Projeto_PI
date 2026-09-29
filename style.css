@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    padding: 15px 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+    border-bottom: 1px solid #ccc;
+}
+
+.img {
+    display: flex;
+    width: 90px;
+    height: 90px;
+    align-items: center;
+    object-fit: contain;
+}
+
+nav ul {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+#entrar {
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.s {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+#botao-azul {
+    background-color: #0841c9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+
+#cadastrar {
+    color: white;
+    font-weight: 700;
+}
+
+main h1{
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+ 
+main {
+    padding: 50px;
+    line-height: 25px;
+}
+ 
+main button{
+    margin-top: 20px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    gap: 25px;
+    display: flexbox;
+}
+ 
+#b_azul {
+    background-color: #032c7d;
+    color: white;
+}
+ 
+#funcionalidades {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+#funcionalidades h2 {
+    font-size: 30px;
+    margin-bottom: 45px;
+    color: #111827;
+}
+
+.passos {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.passo {
+    flex: 1;
+    padding: 20px;
+}
+
+.icone {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f5f9;
+    border-radius: 50%;
+    font-size: 28px;
+}
+
+.passo h3 {
+    font-size: 18px;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.passo p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #64748b;
+}
+
+#funcionalidades a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+#funcionalidades a:hover {
+    transform: translateY(-3px);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+footer {
+    margin-top: 30px;
+    text-align: end;
+}
