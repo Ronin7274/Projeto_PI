@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="icon" href="img/InsertVLogopng.png">
+    <link rel="stylesheet" href="stylelogin.css">
 </head>
+
 <body>
     <header>
         <nav>
-            <img src="img/InsertV_logo.jpeg" alt="Logo do Projeto Integrador" width="100">
-            <center>
-            <a href="index.html">Início</a>
-            <a href="#">Sobre</a>
-            <a href="#">Contato</a>
-            </center>
+            <img src="img/InsertVLogo.jpeg" alt="Logo do Projeto Integrador" width="100">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -22,21 +25,24 @@
             <h1>Bem-vindo!</h1>
             <p>Acesse sua conta ou cadastre-se por aqui.</p>
             <form action="painelvagas.html" method="get">
-                <label for="username">Email:</label><br>
-                <input type="text" id="username" name="username" placeholder="seuemail@gmail.com" required><br><br>
+                <label for="email" ><strong>Email:</strong></label><br>
+                <input type="text" id="email" name="email" placeholder="seuemail@gmail.com" required class="form-label"><br><br>
 
-                <label for="password">Senha:</label><br>
-                <input type="password" id="password" name="password" placeholder="Sua senha" required> <u>Esqueceu sua senha?</u> <!-- Deverá ser um link para recuperação de senha -->
-                <br><br>
+                <label for="senha"><strong>Senha:</strong></label><br>
+                <input type="password" id="senha" name="senha" placeholder="Sua senha" required class="form-label"> <a href="#">Esqueceu sua senha?</a><br><br>
 
-                <input type="submit" value="Entrar">
+                <input type="checkbox" id="lembrar" name="lembrar">
+                <label for="lembrar">Lembrar-me</label><br><br>
+
+            
+                <input type="submit" value="Entrar" class="form-button">
             </form>
             <br>
-            <p>Não possui uma conta? <a href="cadastro.html">Cadastre-se aqui</a>.</p>
+            <p>Não possui uma conta? <a href="#">Cadastre-se aqui</a>.</p>
         </section>
+    </main>
 
     <footer>
-        <br>
         <a href="#">Política e Termos de uso, &copy; 2026 InsertV. Todos os direitos reservados.</a>
     </footer>
 </body>
