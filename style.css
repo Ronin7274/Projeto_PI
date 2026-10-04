@@ -1,0 +1,316 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    position: relative;
+    padding: 15px 50px;
+    width: 100%;
+    height: 115px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+    border-bottom: 1px solid #ccc;
+}
+
+img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+nav ul {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    color: #0841c9;
+}
+
+#entrar {
+    padding: 10px 10px;
+    border: none;
+    border-radius: 7px;
+    font-weight: 700;
+}
+
+.s {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#botao-azul {
+    background-color: #0841c9;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 10px;
+}
+
+#cadastrar {
+    color: white;
+    font-weight: 700;
+}
+
+main h1{
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+ 
+main {
+    padding: 50px;
+    line-height: 25px;
+    position: relative;
+    min-height: 400px;
+}
+ 
+main button{
+    margin-top: 20px;
+    padding: 8px 30px;
+    border: solid 1px #0841c9;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-right: 7px;
+    display: inline-flex;
+}
+
+#inicio {
+    position: relative;
+    min-height: 400px;
+    margin: 0 50px;
+    margin-bottom: -50px;
+}
+
+#inicio img {
+    position: absolute;
+    right: 30px;
+    top: -40px;
+    width: 600px;
+    height: 380px;
+    object-fit: contain
+}
+
+#b_black a {
+    color: black;
+    text-decoration: none;
+}
+
+#b_azul a {
+    color: white;
+    text-decoration: none;
+}
+ 
+#b_azul {
+    background-color: #032c7d;
+    color: white;
+}
+ 
+#funcionalidades {
+    text-align: center;
+    padding: 50px;
+}
+
+#funcionalidades h2 {
+    margin-bottom: 50px;
+}
+
+.passos {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.passo .icone i {
+    color: #333;
+    font-size: 35px;
+}
+
+.passo {
+    width: 30%;
+    padding: 30px 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.passo a {
+    text-decoration: none;
+}
+
+.passo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.passo h3 {
+    margin: 20px 0 15px;
+}
+
+.passo h3 {
+    color: #1a202c;
+    text-decoration: none;
+}
+
+.passo p {
+    color: #718096;
+    line-height: 1.5;
+}
+
+footer {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    background-color: #7997e6;
+    flex-wrap: wrap;
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.footer-links {
+    list-style: none;
+    color: white;
+    padding: 50px;
+}
+
+.copy a {
+    text-decoration: none;
+    color: white;
+}
+
+.copy {
+    width: 100%;
+    background-color: #101b6b;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        height: auto;
+        min-height: 100px;
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav img {
+        width: 70px;
+        height: 70px;
+    }
+
+    nav ul {
+        position: static;
+        transform: none;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .s {
+        gap: 5px;
+    }
+
+    #entrar,
+    #botao-azul {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    main {
+        padding: 30px 20px;
+    }
+
+    main h1 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    #inicio {
+        margin: 0 20px;
+        min-height: auto;
+        margin-bottom: 0;
+    }
+
+    #inicio img {
+        position: static;
+        width: 100%;
+        height: auto;
+        max-width: 500px;
+        display: block;
+        margin: 30px auto 0;
+    }
+
+    main button {
+        padding: 8px 20px;
+        margin-bottom: 10px;
+    }
+
+    #funcionalidades {
+        padding: 40px 20px;
+    }
+
+    #funcionalidades h2 {
+        margin-bottom: 30px;
+    }
+
+    .passos {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .passo {
+        width: 100%;
+        max-width: 450px;
+        padding: 25px 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0;
+    }
+
+    .footer-links {
+        padding: 25px 10px;
+        width: 100%;
+    }
+
+    .copy {
+        font-size: 12px;
+    }
+}
