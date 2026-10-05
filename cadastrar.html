@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="img/InsertVlogo.svg">
+    <link rel="stylesheet" href="stylelogin.css">
+</head>
+
+<body>
+    <header> <!-- Navegação do cabeçalho -->
+        <nav>
+            <img src="img/InsertVlogo.svg" alt="Logo do Projeto Integrador" width="100">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main> <!-- Conteúdo principal -->
+        <section> <!-- Imagem será introduzida nessa seção -->
+            <h1>Bem-vindo!</h1>
+            <p>Cadastre-se por aqui.</p>
+            <form action="painelvagas.html" method="get">
+                <label for="nome"><strong>Seu nome:</strong></label>
+                <input type="text" name="nome" placeholder="Seu nome" required class="form-label"><br><br>
+
+                <label for="email" ><strong>Email:</strong></label><br>
+                <input type="text" id="email" name="email" placeholder="seuemail@gmail.com" required class="form-label"><br><br>
+
+                <label for="senha"><strong>Crie sua senha:</strong></label><br>
+                <input type="password" id="senha" name="senha" placeholder="Sua senha" required class="form-label"> <br><br>
+
+                <label for="nome"><strong>Confirme sua senha:</strong></label>
+                <input type="text" name="nome" placeholder="Sua senha" required class="form-label"><br><br>
+
+                <input type="checkbox" id="lembrar" name="lembrar">
+                <label for="lembrar">Lembrar-me</label><br><br>
+
+            
+                <input type="submit" value="Entrar" class="form-button">
+            </form>
+            <br>
+            <p>Já possui uma conta? <a href="login.html">Acesse aqui</a>.</p>
+        </section>
+    </main>
+
+    <footer> <!-- Rodapé -->
+        <ul class="footer-links">
+            <li>Política e Termos de uso</li>
+            <li>Cursos</li>
+            <li>Vagas</li>
+        </ul>
+        <ul class="footer-links">
+            <li>InsertV@gmail.com</li>
+            <li>(11) 98877 9625</li>
+            <li>@InsertV</li>
+        </ul>
+        <ul class="footer-links">
+            <li>Rua InsertV, 123</li>
+            <li>Diadema - SP</li>
+            <li>Voltar ao inicio</li>
+        </ul>
+
+        <div class="copy">
+            <a href="#">&copy;InsertV 2026 - Todos os direitos reservados.</a>
+        </div>
+    </footer>
+
+</body>
+</html>
