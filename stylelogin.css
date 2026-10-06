@@ -55,37 +55,30 @@ nav a:hover {
     color: #0841c9;
 }
 
-main h1{
+main h1 {
     margin-bottom: 10px;
     line-height: 40px;
 }
- 
+
 main {
     line-height: 25px;
 }
- 
+
 main p {
     margin-bottom: 20px;
 }
 
+.texto {
+    margin: 0 15%;
+}
 #inicio {
-    position: relative;
-    max-width: 1200px;
-    min-height: 540px;
-    margin: 0 220px;
-    padding-left: 600px;
-    box-sizing: border-box;
+    display: flex;
+    width: 100%;
 }
-
-#inicio .imagem-login {
-    position: absolute;
-    left: -290px;
-    top: -80px;
-    width: 900px;
-    height: 650px;
-    object-fit: contain;
+.imagem-login {
+    width: 100%;
+    height: 100%;
 }
-
 #inicio h1 {
     margin-bottom: 10px;
     line-height: 40px;
@@ -147,6 +140,7 @@ footer {
     text-decoration: none;
     color: white;
 }
+
 .copy {
     width: 100%;
     color: white;
