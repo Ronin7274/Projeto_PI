@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    position: relative;
+    padding: 15px 50px;
+    width: 100%;
+    height: 115px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+    border-bottom: 1px solid #ccc;
+}
+
+img {
+    width: 190px;
+    height: 190px;
+    object-fit: contain;
+}
+
+nav ul {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #0841c9;
+}
+
+.icone i {
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+}
+
+.icone {
+    padding: 10px 10px;
+    border: 1px solid #ddd;
+    border-radius: 100px;
+    background-color: #dfdbdb;
+    transition: 0.3s;
+}
+
+#barra-lateral {
+    position: absolute;
+    left: 0;
+    line-height: 40px;
+    font-weight: 600;
+    height: 100%;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #ccc;
+}
+
+#conteudo-central {
+    margin-left: 260px;
+    padding: 20px;
+    line-height: 50px;
+}
+
+.pesquisa {
+    margin-right: 5px;
+    padding: 8px 40px;
+    outline: none;
+    margin: auto;
+    border: none;
+}
+
+.lupa {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px 40px;
+    width: 319px;
+}
+
+#descricao {
+    margin-left: 260px;
+    padding: 20px;
+}
+
+footer {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    background-color: #0841C9;
+    flex-wrap: wrap;
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.footer-links {
+    list-style: none;
+    color: white;
+    padding: 50px;
+}
+
+.rodape-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.copy a {
+    text-decoration: none;
+    color: white;
+}
+
+.copy {
+    width: 100%;
+    color: white;
+    background-color: #101b6b;
+    padding: 15px;
+    text-align: center;
+}

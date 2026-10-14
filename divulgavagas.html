@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divulgar Vagas</title>
+    <link rel="icon" href="img/InsertVLogopng.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="img/InsertVLogo.jpeg" alt="Logo do Projeto Integrador" width="100">
+            <center>
+            <a href="index.html">Início</a>
+            <a href="painelvagas.html">Vagas</a>
+            <a href="painelcursos.html">Cursos</a>
+            <a href="#">Painel</a>
+            </center>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Empresa</h2> <!--Barra lateral de interação-->
+            <p><u>Painel da Empresa</u></p>
+            <p><u>Minhas Vagas</u></p>
+            <p><u>Divulgar Vagas</u></p>
+        </section>
+        
+        <section>
+            <h1>Divulgar Vagas</h1> <!--Conteúdo central da página(por isso esse é h1 e o outro não)-->
+
+            <label for="titulo">Título da Vaga:</label><br>
+            <input type="text" name="titulo" placeholder="Ex: Desenvolvedor Front-end"><br><br>
+
+            <label for="Pesquisa">Área:</label><br>
+            <input type="search" name="Pesquisa" placeholder="Selecione a área" required><br><br>
+
+            <label for="Filtro">Tipo de Vaga:</label><br>
+            <select name="Filtro" id="Filtro">
+                <option value="all">Estágio</option>
+                <option value="htmlcss">CLT</option>
+                <option value="design">Freelance</option>
+            </select><br><br>
+
+            <label for="localizacao">Localização:</label><br>
+            <input type="text" name="localizacao" placeholder="Ex: São Paulo, SP"><br><br>
+
+            <label for="descricao">Descrição da Vaga:</label><br>
+            <textarea name="descricao" rows="5" cols="50" placeholder="Descreva a atividades, requisitos, benefícios, etc."></textarea><br><br>
+
+            <button>Publicar Vaga</button>
+        </section>
+    </main>
+    
+   <footer>
+        <br>
+        <a href="#">Política e Termos de uso, &copy; 2026 InsertV. Todos os direitos reservados.</a>
+    </footer>
+</body>
+</html>
