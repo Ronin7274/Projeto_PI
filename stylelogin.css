@@ -117,6 +117,7 @@ main p {
     padding: 10px 30px;
     margin-bottom: 15px;
     font-weight: 700;
+    cursor: pointer;
 }
 
 footer {
@@ -155,53 +156,42 @@ footer {
 }
 
 @media (max-width: 768px) {
-
-    nav {
+     nav {
         height: auto;
-        min-height: 100px;
         padding: 15px 20px;
-        margin-bottom: 40px;
-        flex-direction: column;
-        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
     }
 
     nav img {
-        width: 120px;
-        height: 80px;
+        width: 350px;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: auto;        
     }
 
     nav ul {
         position: static;
         transform: none;
-        margin: 0;
-        width: 100%;
         justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
+        gap: 40px;
     }
-
-    nav li {
-        font-size: 14px;
-    }
-
 
     #inicio {
-        display: flex;
         flex-direction: column;
         align-items: center;
         max-width: 100%;
         min-height: auto;
-        margin: 0 20px;
-        padding: 0;
-        text-align: center;
     }
 
     #inicio .imagem-login {
         position: static;
-        width: 100%;
-        max-width: 400px;
+        width: 80%;
         height: auto;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     #inicio h1 {
@@ -213,18 +203,22 @@ footer {
     }
 
     #inicio form {
-        width: 100%;
-        max-width: 450px;
-        text-align: left;
+        width: 90%;
     }
 
     footer {
-        margin-top: 50px;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
+        gap: 0;
     }
 
     .footer-links {
-        padding: 25px 15px;
-        width: 50%;
+        padding: 25px 10px;
+        width: 100%;
+    }
+
+    .copy {
+        font-size: 12px;
     }
 }

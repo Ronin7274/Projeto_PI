@@ -108,6 +108,7 @@ main p {
     padding: 10px 30px;
     margin-bottom: 15px;
     font-weight: 700;
+    cursor: pointer;
 }
 
 footer {
@@ -142,4 +143,70 @@ footer {
     background-color: #101b6b;
     padding: 15px;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+     nav {
+        height: auto;
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    nav img {
+        width: 350px;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: auto;        
+    }
+
+    nav ul {
+        position: static;
+        transform: none;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    #inicio {
+        margin: 10px 20px;
+        align-items: center;
+        max-width: 100%;
+        min-height: auto;
+    }
+
+    #inicio h1 {
+        line-height: 35px;
+    }
+
+    #inicio p {
+        line-height: 23px;
+    }
+
+    #inicio form {
+        width: 90%;
+        height: auto;
+    }
+
+    .center {
+        margin: 0 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0;
+    }
+
+    .footer-links {
+        padding: 25px 10px;
+        width: 100%;
+    }
+
+    .copy {
+        font-size: 12px;
+    }
 }
