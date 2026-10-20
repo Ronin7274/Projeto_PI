@@ -98,7 +98,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 25px;
     padding: 8px 40px;
     width: 319px;
 }
