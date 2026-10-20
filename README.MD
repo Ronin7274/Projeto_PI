@@ -6,7 +6,21 @@ O **InsertV** é uma plataforma desenvolvida com o objetivo de **abrir portas pa
 
 A proposta do projeto é oferecer um **site de cursos profissionalizantes**, além de uma plataforma para conectar **empresas e pessoas em busca de oportunidades de emprego**.
 
-![Logo InsertV](./img/InsertV_logo.png)
+![Logo InsertV](./img/img_paginalogin2.png)
+
+---
+
+# Regras da Equipe
+
+## Ninguém faz commit direto na main.
+
+* Cada tarefa é uma branch: feature/nome-da-tarefa.
+
+* Todo PR precisa de revisão de pelo menos 1 colega antes do merge.
+
+* Mensagens de commit no imperativo (Adiciona, Corrige…).
+
+* Rodar git pull antes de começar a trabalhar.
 
 ---
 
