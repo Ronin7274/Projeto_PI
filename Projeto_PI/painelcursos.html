@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Cursos</title>
+    <link rel="icon" href="img/InsertVLogopng.png">
+    <link rel="stylesheet" href="stylepvagas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="img/imgInsertVlogo.svg" alt="Logo do Projeto Integrador" width="100">
+            <ul>
+                <a href="index.html">Início</a>
+                <a href="painelvagas.html">Vagas</a>
+                <a href="painelcursos.html">Cursos</a>
+                <a href="divulgavagas.html">Painel</a>
+            </ul>
+            <a href="#">
+            <div class="icone">
+                <i class="fa-regular fa-user"></i>
+            </div> </a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="barra-lateral">
+            <h2>Cursos</h2> <!--Barra lateral de interação-->
+            <p>Explorar Cursos</p>
+            <p>Meus Cursos</p>
+            <p>Cursos Favoritos</p>
+        </section>
+        
+        <section id="conteudo-central">
+            <h1>Todos os Cursos</h1> 
+            <label for="Pesquisa"></label>
+            <div class="lupa">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" name="Pesquisa" placeholder="Buscar Cursos" class="pesquisa">
+            </div>
+
+            <label for="Filtro">Filtrar por:</label>
+            <select name="Filtro" id="Filtro">
+                <option value="all">Todas</option>
+                <option value="htmlcss">HTML e CSS</option>
+                <option value="design">Design Digital</option>
+                <option value="marketing">Marketing</option>
+                <option value="cosmetico">Cosméticos</option>
+                <option value="Python">Python</option>
+            </select>
+        </section>
+
+        <section id="descricao">
+            <h3>Curso 1</h3> <!--Título do curso-->
+            <p>Descrição do curso 1...</p> <!--Descrição do curso, como duração, matérias e etc.-->
+            <button>Inscrever-se</button> <u>Publicado há 2 dias</u>
+
+            <h3>Curso 2</h3>
+            <p>Descrição do curso 2...</p>
+            <button>Inscrever-se</button> <u>Publicado há 4 dias</u>
+
+            <h3>Curso 3</h3> 
+            <p>Descrição do curso 3...</p>
+            <button>Inscrever-se</button> <u>Publicado há 6 dias</u>
+        </section>
+    </main>
+    
+   <footer>
+        <ul class="footer-links">
+            <li>Política e Termos de uso</li>
+            <li>Cursos</li>
+            <li>Vagas</li>
+        </ul>
+        <ul class="footer-links">
+            <li>InsertV@gmail.com</li>
+            <li>(11) 98877 9625</li>
+            <li>@InsertV</li>
+        </ul>
+        <ul class="footer-links">
+            <li>Rua InsertV, 123</li>
+            <li>Diadema - SP</li>
+            <li>Voltar ao inicio</li>
+        </ul>
+
+        <div class="copy">
+            <a href="#">&copy;InsertV 2026 - Todos os direitos reservados.</a>
+        </div>
+    </footer>
+</body>
+</html>
