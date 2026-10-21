@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/InsertVLogopng.png">
+    <link rel="stylesheet" href="styleloginEmpresa.css">
     <title>Login</title>
 </head>
+
 <body>
     <section class="principal">
-        <div class="background"></div>
+        <div class="background">
+            <div class="card">
+                <h2>Login</h2>
+                <form action="#" method="get" class="form">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu email corporativo..." required>
+
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+                    <a href="#" class="senha-esquecida">Esqueceu sua senha?</a>
+                    <button type="submit" class="bt-entrar">Entrar</button>
+                </form>
+                <p class="p-cadastro">Não tem uma conta?</p>
+                <p class="link-cadastro"><a href="#" >Cadastre-se</a></p>
+            </div>
+        </div>
         <div class="img"></div>
 
     </section>
-    
+
 </body>
+
 </html>

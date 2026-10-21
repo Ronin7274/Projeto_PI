@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+:root {
+    --primary-color: #0841C9;
+    --secondary-color: #06215F;
+    --branco: #f2f2f2;
+    --cinza: #3333337a;
+    --font-family: inter, sans-serif;
+}
+
+.principal {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    background: #0841C9;
+    background: radial-gradient(circle, rgba(8, 65, 201, 1) 0%, rgba(6, 33, 95, 1) 100%);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    /* Fundo branco translúcido */
+    backdrop-filter: blur(12px);
+    /* Desfoque do que está atrás */
+    -webkit-backdrop-filter: blur(12px);
+    /* Compatibilidade com Safari */
+    border-radius: 16px;
+    /* Bordas arredondadas */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Borda clara e fina */
+    padding: 30px;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    height: 65%;
+
+}
+
+.card h2 {
+    color: var(--branco);
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: var(--branco);
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+input {
+    border: none;
+    border-radius: 25px;
+    padding: 15px 25px;
+    margin-bottom: 15px;
+    background: var(--secondary-color);
+}
+input::placeholder {
+    color: #aca9a9ad;
+    font-size: 12px;
+}
+.senha-esquecida {
+    text-align: right;
+    font-size: 12px;
+    color: var(--branco);
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+.bt-entrar {
+    padding: 10px 20px;
+    width: 65%;
+    margin:0 auto;
+    text-align: center;
+    border-radius: 25px;
+    border: none;
+    background: #21027D;
+    color: var(--branco);
+    font-weight: 700;
+}
+.p-cadastro {
+    text-align: center;
+    color: var(--branco);
+    font-size: 12px;
+    margin-top: 15px;
+    font-weight: 300;
+}
+.link-cadastro {
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 5px;
+}
+.link-cadastro a {
+    color: #cf2222;
+    font-weight: 500;
+}
