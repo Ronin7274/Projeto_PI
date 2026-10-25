@@ -18,8 +18,15 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: white;
+    overflow: hidden;
 }
-
+.logo {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: 130px;
+}
 .principal {
     display: flex;
     width: 100%;
