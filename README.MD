@@ -6,7 +6,7 @@ O **InsertV** é uma plataforma desenvolvida com o objetivo de **abrir portas pa
 
 A proposta do projeto é oferecer um **site de cursos profissionalizantes**, além de uma plataforma para conectar **empresas e pessoas em busca de oportunidades de emprego**.
 
-![Logo InsertV](./img/img_paginalogin2.png)
+![Logo InsertV](./img/InsertVlogo.svg)
 
 ---
 
