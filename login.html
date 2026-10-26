@@ -6,6 +6,8 @@
     <title>Login</title>
     <link rel="icon" href="img/InsertVLogopng.png">
     <link rel="stylesheet" href="stylelogin.css">
+    <!-- carrega o script do login e aguarda o HTML ser interpretado. -->
+    <script src="login.js" defer></script>
 </head>
 
 <body>
@@ -26,7 +28,7 @@
             <div class="texto">
                 <h1>Bem-vindo(a) de volta!</h1>
                 <p>Acesse sua conta ou cadastre-se por aqui.</p>
-                <form action="painelvagas.html" method="get">
+                <form action="painelvagas.html" method="get" id="form_login">
                     <label for="email"><strong>Email:</strong></label><br>
                     <input type="text" id="email" name="email" placeholder="seuemail@gmail.com" required
                         class="form-label"><br><br>
@@ -41,6 +43,8 @@
 
                     <input type="submit" value="Entrar" class="form-button">
                 </form>
+                <!-- Alterado: fornece a área de status usada pelo login.js. -->
+                <p id="message" role="status" aria-live="polite"></p>
                 <br>
                 <p>Não possui uma conta? <a href="cadastrar.html">Cadastre-se aqui</a>.</p>
             </div>
