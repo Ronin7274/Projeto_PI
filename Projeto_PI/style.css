@@ -250,6 +250,8 @@ main button{
 }
 
 .icones {
+    height: 80px;
+    width: 100px;
     font-size: 25px;
     padding: 25px 10px;
     border: 1px solid #ddd;

@@ -9,61 +9,58 @@
 </head>
 
 <body>
-    <header> <!-- Navegação do cabeçalho -->
-        <nav>
-            <img src="img/imgInsertVlogo.svg" alt="Logo do Projeto Integrador" width="100">
+    <header> <!--Cabeçalho da página-->
+        <nav> <!-- Navegação do cabeçalho -->
+            <img src="img/imgInsertVlogo.svg" alt="Logo marca do InsertV">
             <ul>
                 <li><a href="index.html">Início</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#contatos">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main> <!-- Conteúdo principal -->
         <section id="inicio">
-            <img src="img/img_paginalogin2.png" alt="Imagem de uma mulher digitando em seu notebook" class="imagem-login">
-            <div class="texto">
+            <img src="img/img_paginalogin2.png" alt="Imagem de uma mulher digitando em seu notebook" class="imagem-login"> <!--Imagem localizada ao lado esquerdo da página-->
+            <div class="texto"> <!--Seção para colocar conteúdo ao lado direito da página-->
                 <h1>Bem-vindo(a) de volta!</h1>
                 <p>Acesse sua conta ou cadastre-se por aqui.</p>
-                <form action="painelvagas.html" method="get">
+                <form action="painelvagas.html" method="get"> <!--Formulário-->
                     <label for="email"><strong>Email:</strong></label><br>
-                    <input type="text" id="email" name="email" placeholder="seuemail@gmail.com" required
-                        class="form-label"><br><br>
+                    <input type="text" id="email" name="email" placeholder="seuemail@gmail.com" required class="form-label"><br><br>
 
                     <label for="senha"><strong>Senha:</strong></label><br>
                     <input type="password" id="senha" name="senha" placeholder="Sua senha" required class="form-label">
                     <a href="#" class="senha">Esqueceu sua senha?</a><br><br>
 
                     <input type="checkbox" id="lembrar" name="lembrar">
-                    <label for="lembrar">Lembrar-me</label><br><br>
+                    <label for="lembrar">Lembrar-me</label><br><br> <!--Opção caso queira que lembre de seus dados para não ter que colocar os dados novamente-->
 
-
-                    <input type="submit" value="Entrar" class="form-button">
+                    <input type="submit" value="Entrar" class="form-button"> <!--Botão para login-->
                 </form>
                 <br>
-                <p>Não possui uma conta? <a href="cadastrar.html" class="empresa">Cadastre-se aqui</a>.</p>
-                <p>É empresa parceira?<a href="loginEmpresa.html">Acesse aqui</a>.</p>
+                <p>Não possui uma conta? <a href="cadastrar.html" class="empresa">Cadastre-se aqui</a>.</p> <!--Direcionamento para página de cadastro-->
+                <p>É empresa parceira?<a href="loginEmpresa.html">Acesse aqui</a>.</p> <!--Direcionamento para página de login empresarial-->
             </div>
         </section>
     </main>
 
     <footer> <!-- Rodapé -->
-        <ul class="footer-links">
+        <ul class="footer-links"> <!--Coluna a esquerda no footer-->
             <div class="rodape-links">
                 <li><a href="#">Política e Termos de uso</a></li>
                 <li><a href="#">Cursos</a></li>
                 <li><a href="#">Vagas</a></li>
             </div>
         </ul>
-        <ul class="footer-links">
+        <ul class="footer-links" id="contatos"> <!--Coluna centralizada no footer-->
             <div class="rodape-links">
                 <li><a href="#">InsertV@gmail.com</a></li>
                 <li><a href="#">(11) 98877 9625</a></li>
                 <li><a href="#">@InsertV</a></li>
             </div>
         </ul>
-        <ul class="footer-links">
+        <ul class="footer-links"> <!--Coluna a direita no footer-->
             <div class="rodape-links">
                 <li><a href="#">Rua InsertV, 88</a></li>
                 <li><a href="#">Diadema - SP</a></li>

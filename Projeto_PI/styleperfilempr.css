@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header img {
+    width: 210px;
+    height: 220px;
+    object-fit: contain;
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    border-bottom: 4px solid #0841c9;
+    padding-bottom: 5px;
+}
+
+.icone i {
+    font-size: 22px;
+}
+
+.icone {
+    background-color: #ddd;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px #0077bd;
+}
+
+/* Área principal */
+main {
+    flex: 1;
+}
+
+.dashboard {
+    display: flex;
+}
+
+/* Menu lateral */
+.sidebar {
+    width: 220px;
+    padding: 35px 20px;
+    flex-shrink: 0;
+    border-right: 2px solid #e5e7eb;
+}
+
+.sidebar-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.menu-item:hover {
+    background-color: #d1e9fd;
+}
+
+.menu-item.ativo {
+    background-color: #b9d9ef;
+    color: #003b91;
+}
+
+/* Conteúdo central */
+.conteudo {
+    flex: 1;
+}
+
+#conteudo-central {
+    width: 100%;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #003b91;
+}
+
+.banner img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Logotipo da empresa */
+.logo-empresa {
+    position: absolute;
+    top: 40px;
+    left: 9%;
+    width: 100px;
+    height: 80px;
+    background-color: #022C7D;
+    border-radius: 12px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-empresa h2 {
+    font-size: 22px;
+}
+
+.logo-empresa p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Texto do banner */
+.texto-banner {
+    position: absolute;
+    top: 45px;
+    left: 20%;
+    color: white;
+    max-width: 450px;
+}
+
+.texto-banner h1 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.texto-banner p {
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+/* Sobre a empresa e benefícios */
+.sobre-empresa {
+    display: flex;
+    gap: 20px;
+    padding: 15px 4%;
+    align-items: stretch;
+}
+
+.card-sobre {
+    flex: 1;
+    border-radius: 10px;
+    padding: 13px;
+    box-shadow: 0 0 12px #00000030;
+}
+
+.card-sobre h3 {
+    color: #003b91;
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.card-sobre p {
+    font-size: 14px;
+    line-height: 1.3;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.card-sobre .t-azul {
+    margin-top: 8px;
+    color: #187FC9C0;
+}
+
+/* Benefícios */
+.card-beneficios {
+    width: 250px;
+    border-radius: 10px;
+    padding: 13px;
+    box-shadow: 0 0 10px #00000030;
+}
+
+.card-beneficios h3 {
+    color: #003b91;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.card-beneficios h3 i {
+    margin-right: 5px;
+}
+
+.card-beneficios ul {
+    list-style: none;
+}
+
+.card-beneficios li {
+    font-size: 14px;
+    margin-bottom: 7px;
+    color: #333;
+    line-height: 1.3;
+}
+
+.card-beneficios li i {
+    color: #003b91;
+    margin-right: 4px;
+}
+
+/* Cultura da empresa */
+.titulo-cultura {
+    color: #003b91;
+    font-size: 18px;
+    margin: 0 4% 12px;
+}
+
+.cards-cultura {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+    padding: 0 4%;
+}
+
+.card-cultura {
+    background-color: #b9ddf5;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.card-cultura i {
+    background-color: #003b91;
+    color: white;
+    border-radius: 13px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.card-cultura h3 {
+    color: #003b91;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.card-cultura p {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Sede central */
+.sede-central {
+    padding: 15px 4%;
+    margin-bottom: 15px;
+}
+
+.sede-central h3 {
+    color: #003b91;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.sede-central img {
+    width: 320px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.sede-central p {
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.sede-central a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #003b91;
+}
+
+/* Rodapé */
+footer {
+    height: 40px;
+    background-color: #022C7D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 110px;
+    }
+
+    .sobre-empresa {
+        flex-direction: column;
+    }
+
+    .card-beneficios {
+        width: 100%;
+    }
+
+    .cards-cultura {
+        grid-template-columns: 1fr;
+    }
+
+    .texto-banner {
+        left: 22%;
+    }
+
+    .texto-banner h1 {
+        font-size: 17px;
+    }
+}

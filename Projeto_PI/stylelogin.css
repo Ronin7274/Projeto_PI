@@ -111,20 +111,20 @@ main p {
 
 .form-label {
     display: block;
-    width: 115%;
+    width: 90%;
     box-sizing: border-box;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px 15px;
 }
 
 .form-button {
     display: block;
-    width: 115%;
+    width: 90%;
     background-color: #0841c9;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px 30px;
     margin-bottom: 15px;
     font-weight: 700;

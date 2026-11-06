@@ -9,19 +9,19 @@
 </head>
 
 <body>
-    <header> <!-- Navegação do cabeçalho -->
-        <nav>
-            <img src="img/imgInsertVlogo.svg" alt="Logo do Projeto Integrador" width="100">
+    <header> <!--Cabeçalho-->
+        <nav> <!-- Navegação do cabeçalho -->
+            <img src="img/imgInsertVlogo.svg" alt="Logo do Projeto Integrador">
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="index.html" class="ativo">Início</a></li>
+                <li><a href="login.html"><button id="entrar">Entrar</button></a></li>
             </ul>
+            
         </nav>
     </header>
 
     <main> <!-- Conteúdo principal -->
-        <div class="bolhas">
+        <div class="bolhas"> <!--Circulos de decoração espalhados na página-->
             <span class="circulo circulo1"></span>
             <span class="circulo circulo2"></span>
             <span class="circulo circulo3"></span>
@@ -31,33 +31,33 @@
             <span class="circulo circulo7"></span>
             <span class="circulo circulo8"></span>
         </div>
-        <section id="inicio">
+        <section id="inicio"> <!--Seção para preechimento do formulário de cadastro-->
             <h1 class="center">Crie sua conta</h1>
-            <div class="form">
-            <form action="painelcursos.html" method="get" class="formulario">
-            <div class="campo">
+            <div class="form"> <!--Campo em contorno do formulário-->
+            <form action="painelcursos.html" method="get" class="formulario"> <!--Formulário-->
+            <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
                 <label for="nome">Nome completo:</label>
                 <input type="text" id="nome" placeholder="Digite seu nome completo...">
             </div>
 
-            <div class="campo">
+            <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
                 <label for="email">Email:</label>
                 <input type="email" id="email" placeholder="Digite seu email...">
             </div>
 
-            <div class="linha">
+            <div class="linha"> <!--Seção para alinhamento de 3 campos na mesma linha-->
 
-                <div class="campo">
+                <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
                     <label for="data">Data de nascimento:</label>
                     <input type="date" id="data">
                 </div>
 
-                <div class="campo">
+                <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
                     <label for="celular">Celular:</label>
                     <input type="tel" id="celular" placeholder="Número com DDD...">
                 </div>
 
-                <div class="campo">
+                <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
                     <label for="cidade">Localidade:</label>
                     <div class="localidade">
                         <input type="text" id="cidade" placeholder="Cidade">
@@ -97,51 +97,51 @@
 
             </div>
 
-            <div class="campo">
+            <div class="senhas">
+            <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
                 <label for="senha">Crie sua senha:</label>
-                <input type="password" id="senha" placeholder="Digite sua senha...">
+                <input type="password" id="senha" placeholder="Digite sua senha..."><br>
             </div>
 
-            <div class="campo">
+            <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
                 <label for="confirmar">Confirme sua senha:</label>
                 <input type="password" id="confirmar" placeholder="Confirme a senha...">
             </div>
             </div>
+            </div>
 
-            <div class="regras-senha">
+            <div class="regras-senha"> <!--Especificações para criação de senha-->
                 <ul>
                     <li>Sua senha deve conter 8 caracteres;</li>
                     <li>Sua senha deve conter números;</li>
                     <li>Sua senha deve conter caracteres especiais;</li>
                 </ul>
             </div>
-            <label for="termos" class="termos">
+            <label for="termos" class="termos"> <!--Opção de selecionar os termos de uso-->
                 <input type="checkbox" id="termos" required>
                 Aceito todos os <a href="#">Termos de Uso</a>
             </label>
-            <input type="submit" value="Criar Conta" class="form-button">
+            <input type="submit" value="Criar Conta" class="form-button"> <!--Botão para criar conta-->
             </form>
-            <br>
-            <p class="center">Já possui uma conta? <a href="login.html">Acesse aqui</a>.</p>
         </section>
     </main>
 
     <footer> <!-- Rodapé -->
-        <ul class="footer-links">
+        <ul class="footer-links"> <!--Coluna a esquerda no footer-->
             <div class="rodape-links">
             <li><a href="#">Política e Termos de uso</a></li>
             <li><a href="#">Cursos</a></li>
             <li><a href="#">Vagas</a></li>
             </div>
         </ul>
-        <ul class="footer-links">
+        <ul class="footer-links"> <!--Coluna centralizada no footer-->
             <div class="rodape-links">
             <li><a href="#">InsertV@gmail.com</a></li>
             <li><a href="#">(11) 98877 9625</a></li>
             <li><a href="#">@InsertV</a></li>
             </div>
         </ul>
-        <ul class="footer-links">
+        <ul class="footer-links"> <!--Coluna a direita no footer-->
             <div class="rodape-links">
             <li><a href="#">Rua InsertV, 88</a></li>
             <li><a href="#">Diadema - SP</a></li>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar - Empresa</title>
+    <link rel="icon" href="img/InsertVLogopng.png">
+    <link rel="stylesheet" href="stylecadastroEmpr.css">
+</head>
+
+<body>
+    <main class="cadastro-container"> <!--Conteúdo da página-->
+
+        <!-- Lado esquerdo: formulário -->
+        <section id="principal"> 
+
+            <img src="img/imgInsertVlogo.svg" alt="Logo marca do InsertV" class="logo">
+            <h2>Cadastro</h2>
+            <p>Já possui uma conta? <a href="loginEmpresa.html">Clique aqui.</a></p>
+
+            <p class="titulo-secao">Dados empresariais</p>
+
+            <form action="divulgavagas.html" method="get" class="formulario"> <!--Formulário-->
+
+                <div class="campo"> <!--Campo individual do formulário-->
+                    <label for="nome">Nome <span>*</span></label>
+                    <input type="text" id="nome" placeholder="Digite o nome da empresa">
+                </div>
+
+                <div class="campo"> <!--Campo individual do formulário-->
+                    <label for="cnpj">CNPJ <span>*</span></label>
+                    <input type="text" id="cnpj" placeholder="Informe os números do CNPJ">
+                </div>
+
+                <div class="campo"> <!--Campo individual do formulário-->
+                    <label for="email">E-mail <span>*</span></label>
+                    <input type="email" id="email" placeholder="Informe o e-mail corporativo">
+                </div>
+
+                <div class="campo"> <!--Campo individual do formulário-->
+                    <label for="senha">Senha <span>*</span></label>
+                    <input type="password" id="senha" placeholder="Crie sua senha">
+                </div>
+
+                <div class="campo"> <!--Campo individual do formulário-->
+                    <label for="cidade">Cidade <span>*</span></label>
+                    <input type="text" id="cidade" placeholder="Digite o nome da cidade">
+                </div>
+
+                <div class="campo"> <!--Campo individual do formulário-->
+                    <label for="estado">UF <span>*</span></label>
+                    <select id="estado">
+                        <option value="">Selecione ou digite o estado</option>
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AP">AP</option>
+                        <option value="AM">AM</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MG">MG</option>
+                        <option value="MT">MT</option>
+                        <option value="MS">MS</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PR">PR</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RS">RS</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="SC">SC</option>
+                        <option value="SP">SP</option>
+                        <option value="SE">SE</option>
+                        <option value="TO">TO</option>
+                    </select>
+                </div>
+
+                <div class="termos"> <!--Opção para selecionar os termos de uso-->
+                    <input type="checkbox" id="termos" required>
+                    <label for="termos">Aceito todos os <a href="#">termos e diretrizes.</a>
+                    </label>
+                </div>
+                <input type="submit" value="Criar minha conta →" class="form-button"> <!--Botão para criação da conta-->
+            </form>
+            
+            <div class="fim"> <!--Links para navegar as páginas anteriores do site-->
+                <a href="index.html">Página inicial</a>
+                <a href="#">Termos e direitos</a>
+            </div>
+        </section>
+
+        <!-- Lado direito: painel azul -->
+        <aside class="background"> <!--Seção para preechimento completo do background-color ao lado direito-->
+            <div class="texto-background"> <!--Conteúdo nesse lado direito-->
+                <h1>Seu próximo passo <span>começa aqui!</span></h1>
+                <p>Crie sua conta e descubra novos talentos para sua empresa.</p>
+            </div>
+            <img src="img/img_cadastro_empresa.png" alt="Ilustração de gestão empresarial">
+        </aside>
+
+      
+    </main>
+</body>
+</html>

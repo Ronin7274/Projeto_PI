@@ -6,36 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/InsertVLogopng.png">
     <link rel="stylesheet" href="styleloginEmpresa.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
     <title>Login</title>
 </head>
 
 <body>
-    <main>
+    <main> <!--Conteúdo principal-->
         <section class="principal">
             <img src="img\InsertVlogocopia.svg" alt="Logo do Projeto Integrador" class="logo">
 
-            <div class="background">
+            <div class="background"> <!--Seção para preechimento completo do background-color ao lado direito da página-->
                 <div class="card">
                     <h2>Login</h2>
-                    <form action="painelvagas.html" method="get" class="form">
+                    <form action="painelvagas.html" method="get" class="form"> <!--Formulário-->
                         <label for="email">Email:</label>
                         <input type="email" name="email" id="email" placeholder="Digite seu email corporativo..." required>
 
                         <label for="senha">Senha:</label>
                         <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
                         <a href="#" class="senha-esquecida">Esqueceu sua senha?</a>
-                        <button type="submit" class="btn-solid theme-primary bt-entrar">Entrar</button>
+                        <button type="submit" class="btn-solid theme-primary bt-entrar">Entrar</button> <!--Botão para acessar conta empresarial-->
                     </form>
                     <p class="p-cadastro">Não tem uma conta?</p>
-                    <p class="link-cadastro"><a href="#">Cadastre-se</a></p>
+                    <p class="link-cadastro"><a href="cadastroempresa.html">Cadastre-se</a></p> <!--Direciona para página de cadastro empresarial-->
                 </div>
             </div>
-            <div class="div-img">
+            <div class="div-img"> <!--Imagem localizada ao lado direito da página-->
                 <img src="img/Fundo.jpg" class="img-fluid" alt="...">
             </div>
-            <div class="position-absolute bottom-0 start-0 link-rodape">
+            <div class="position-absolute bottom-0 start-0 link-rodape"> <!--Campo de direitos no canto inferior esquerdo da página-->
                 <p>InsertV</p>
                 <p>©2026 Todos os direitos reservados.</p>
             </div>
@@ -45,14 +44,11 @@
                     <path
                         d="M5.793 1a1 1 0 0 1 1.414 0l.647.646a.5.5 0 1 1-.708.708L6.5 1.707 2 6.207V12.5a.5.5 0 0 0 .5.5.5.5 0 0 1 0 1A1.5 1.5 0 0 1 1 12.5V7.207l-.146.147a.5.5 0 0 1-.708-.708zm3 1a1 1 0 0 1 1.414 0L12 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l1.854 1.853a.5.5 0 0 1-.708.708L15 8.207V13.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 4 13.5V8.207l-.146.147a.5.5 0 1 1-.708-.708zm.707.707L5 7.207V13.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5V7.207z" />
                 </svg>
-                <a href="index.html" class="link-pag">Página inicial</a>
+                <a href="index.html" class="link-pag">Página inicial</a> <!--Link para redirecionar a página inicial do site-->
             </div>
 
         </section>
-        <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
-            crossorigin="anonymous"></script>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
     </main>
 </body>
-
 </html>

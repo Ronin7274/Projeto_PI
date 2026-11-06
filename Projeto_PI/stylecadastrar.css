@@ -39,7 +39,7 @@ nav ul {
     transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
 }
 
 nav li {
@@ -52,8 +52,17 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover {
+nav a.ativo:hover {
     border-bottom: 4px solid #0841c9;
+}
+
+#entrar {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 main h1{
@@ -129,7 +138,7 @@ main {
 .campo input,
 .localidade select {
     height: 65px;
-    padding: 0 25px;
+    padding: 0 20px;
     border: 2px solid #0841C9;
     border-radius: 40px;
     outline: none;
@@ -146,7 +155,7 @@ main {
 .linha {
     display: grid;
     grid-template-columns: 1fr 1fr 1.1fr;
-    gap: 25px;
+    gap: 18px;
     align-items: end;
 }
 
@@ -160,6 +169,10 @@ main {
     cursor: pointer;
 }
 
+.senhas {
+    width: 70%;
+}
+
 .form-button {
     background-color: #0841c9;
     color: white;
@@ -170,6 +183,12 @@ main {
     border-radius: 20px;
     font-weight: 700;
     cursor: pointer;
+    transition: 0.2s;
+}
+
+.form-button:hover {
+    background-color: #0a2f9c;
+    transform: scale(1.05);
 }
 
 .center {
