@@ -1,68 +1,90 @@
 {
-    "carga_horaria":[
-        {"id_carga_horaria":1, "nome":"meio periodo"},
-        {"id_carga_horaria":2, "nome":"integral"},
-        {"id_carga_horaria":3, "nome":"estágio"}
-    ],
-    "candidato":[
-        {
-            "id_candidato":"1",
-            "nome":"carlos",
-            "email":"carlos@gmail.com",
-            "senha":"carlos123",
-            "tipo_usuario":"cliente"
-
-        }
-    ],
-    "empresa":[
-        {
-            "id_empresa":"2",
-            "nome":"carlos empresa",
-            "email":"carlos_empresa@gmail.com",
-            "senha":"carlosEmpresa123",
-            "cnpj":"01.143.186/0001-09",
-            "tipo_usuario":"empresa"
-        }
-    ],
-    "cursos":[
-        {
-            "id_cursos":"4",
-            "titulo":"design avançado",
-            "descricao":"curso para ensinar design avançado",
-            "tipo":"design",
-            "dt_publicacao":"01-01-2027",
-            "inscrito":"true"
-        }
-    ],
-    "vagas":[
-        {
-            "id_vagas":"5",
-            "id_empresa":"2",
-            "titulo":"vaga de designer",
-            "tipo":"design",
-            "descricao":"vaga para design avançado",
-            "dt_publicacao":"02-02-2027",
-            "id_carga_horaria":3,
-            "inscrito":"false"
-        }
-    ],
-    "perfil":[
-        {
-            "id_perfil":"6",
-            "id_empresa":"2",
-            "id_candidato":"1",
-            "id_cursos":"4",
-            "id_vagas":"5",
-            "biografia":"",
-            "area":"analista"
-        }
-    ],
-    "postagem":[
-        {
-            "id_postagem":"10",
-            "id_candidato":"1",
-            "id_empresa":"2",
-            "escrita":""
-        }
-    ]
+  "carga_horaria": [
+    {
+      "id_carga_horaria": 1,
+      "nome": "meio periodo"
+    },
+    {
+      "id_carga_horaria": 2,
+      "nome": "integral"
+    },
+    {
+      "id_carga_horaria": 3,
+      "nome": "estágio"
+    }
+  ],
+  "candidato": [
+    {
+      "id_candidato": "1",
+      "nome": "carlos",
+      "email": "carlos@gmail.com",
+      "senha": "carlos123",
+      "tipo_usuario": "cliente"
+    },
+    {
+      "id_candidato": "53ed8c37-543f-4b6c-be25-1cee37f11c14",
+      "nome": "pedro",
+      "email": "pedro@gmail.com",
+      "senha": "96557a170e9a594a84a86ad675d0627d:af7f4da2a8e1e3b6e139e5f658835f91497b8d0ea7b3d2300dcb640058040bbf1db35ac9cf10d8c6ce4647f3880e6fcaa40b630ce3fc7e9fe0f22de5598365c3",
+      "tipo_usuario": "cliente"
+    },
+    {
+      "id_candidato": "2d7be7e8-311a-4380-8871-4f5fd9b511ae",
+      "nome": "paulo",
+      "email": "paulo@gmail.com",
+      "senha": "36ab3b7d2e937a824eca5b295f79c69c:4263955c85e34e9e889966821e4514aafb9387efcd4c83068187c389ad16d11060dad2027dd3ad4e2e6ed9fa19efe075974bdc2a4d5494ddd1583c8428c9e0f3",
+      "tipo_usuario": "cliente"
+    }
+  ],
+  "empresa": [
+    {
+      "id_empresa": "2",
+      "nome": "carlos empresa",
+      "email": "carlos_empresa@gmail.com",
+      "senha": "carlosEmpresa123",
+      "cnpj": "01.143.186/0001-09",
+      "tipo_usuario": "empresa"
+    }
+  ],
+  "cursos": [
+    {
+      "id_cursos": "4",
+      "titulo": "design avançado",
+      "descricao": "curso para ensinar design avançado",
+      "tipo": "design",
+      "dt_publicacao": "01-01-2027",
+      "inscrito": "true"
+    }
+  ],
+  "vagas": [
+    {
+      "id_vagas": "5",
+      "id_empresa": "2",
+      "titulo": "vaga de designer",
+      "tipo": "design",
+      "descricao": "vaga para design avançado",
+      "dt_publicacao": "02-02-2027",
+      "id_carga_horaria": 3,
+      "inscrito": "false"
+    }
+  ],
+  "perfil": [
+    {
+      "id_perfil": "6",
+      "id_empresa": "2",
+      "id_candidato": "1",
+      "id_cursos": "4",
+      "id_vagas": "5",
+      "biografia": "",
+      "area": "analista"
+    }
+  ],
+  "postagem": [
+    {
+      "id_postagem": "10",
+      "id_candidato": "1",
+      "id_empresa": "2",
+      "escrita": ""
+    }
+  ]
 }
