@@ -1,0 +1,209 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.cadastro-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Lado esquerdo */
+#principal {
+    width: 64%;
+    padding: 70px 40px;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    right: 1px;
+}
+
+#principal h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+#principal p {
+    font-size: 15px;
+}
+
+#principal a {
+    color: #00358b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#principal a:hover {
+    color:#b00000;
+}
+
+/* Títulos das seções */
+.titulo-secao {
+    color: #a49b9b;
+    font-size: 15px;
+    margin: 40px 0px;
+}
+
+/* Formulário */
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 30px;
+    margin-top: 10px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.campo label span {
+    color: red;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    height: 50px;
+    padding: 0px 14px;
+    border: 1px solid #608cff;
+    border-radius: 18px;
+    background-color: #dedede;
+    font-size: 14px;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #00358b;
+}
+
+/* Termos */
+.termos {
+    grid-column: 1 / 3;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px;
+    font-size: 10px;
+}
+
+.termos input {
+    cursor: pointer;
+}
+
+.termos label {
+    font-size: 15px;
+}
+
+.termos a {
+    color: red !important;
+}
+
+/* Botão */
+.form-button {
+    grid-column: 1 / 3;
+    justify-self: center;
+    width: 190px;
+    height: 48px;
+    background: linear-gradient(to right, #002b79, #0755e8);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Lado direito */
+.background {
+    width: 36%;
+    background: linear-gradient(135deg, #073b91, #00236b);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: white;
+}
+
+.texto-background {
+    width: 100%;
+    max-width: 250px;
+}
+
+.texto-background h1 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.texto-background h1 span {
+    display: block;
+    color: #00a5ff;
+}
+
+.texto-background p {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.background img {
+    width: 400px;
+    height: 400px;  
+    object-fit: contain;
+}
+
+.fim {
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    left: 30px;
+}
+
+.fim a:hover {
+    color:#b00000;
+}
+
+@media (max-width: 768px) {
+
+    .cadastro-container {
+        flex-direction: column;
+    }
+
+    #principal,
+    .background {
+        width: 100%;
+    }
+
+    #principal {
+        padding: 70px 25px;
+    }
+
+    .formulario {
+        column-gap: 15px;
+    }
+
+    .background {
+        min-height: 400px;
+    }
+}

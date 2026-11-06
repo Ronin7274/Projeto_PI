@@ -5,77 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar</title>
     <link rel="icon" href="img/InsertVLogopng.png">
-    <link rel="stylesheet" href="estilizacao/stylecadastrar.css">
-    <!-- carrega o script de cadastro após a leitura do HTML. -->
-    <script src="cadastrar.js" defer></script>
+    <link rel="stylesheet" href="stylecadastrar.css">
 </head>
 
 <body>
-    <header> <!-- Navegação do cabeçalho -->
-        <nav>
-            <img src="img/imgInsertVlogo.svg" alt="Logo do Projeto Integrador" width="100">
+    <header> <!--Cabeçalho-->
+        <nav> <!-- Navegação do cabeçalho -->
+            <img src="img/imgInsertVlogo.svg" alt="Logo do Projeto Integrador">
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="index.html" class="ativo">Início</a></li>
+                <li><a href="login.html"><button id="entrar">Entrar</button></a></li>
             </ul>
+            
         </nav>
     </header>
 
     <main> <!-- Conteúdo principal -->
-        <section id="inicio">
-            <div class="texto">
-            <h1>Seja Bem-vindo(a)!</h1>
-            <p>Faça o seu cadastro por aqui.</p>
-            <form action="painelvagas.html" method="get" id="form_cadastro">
-                <label for="nome"><strong>Nome completo:</strong></label>
-                <input type="text" id="nome" name="nome" placeholder="Seu nome" required class="form-label"><br><br>
-
-                <label for="celular"><strong>Celular:</strong></label><br>
-                <input type="text" name="celular" placeholder="(11) 99999-9999" class="form-label"><br><br>
-
-                <label for="email" ><strong>Email:</strong></label><br>
-                <input type="email" id="email" name="email" placeholder="seuemail@gmail.com" required class="form-label"><br><br>
-
-                <label for="data"><strong>Data de nascimento:</strong></label>
-                <input type="date" name="data" class="form-label"><br><br>
-                
-                <label for="senha"><strong>Crie sua senha:</strong></label><br>
-                <input type="password" id="senha" name="senha" placeholder="Sua senha" required class="form-label"> <br><br>
-
-                <label for="confirmar-senha"><strong>Confirme sua senha:</strong></label>
-                <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Sua senha" required class="form-label"><br><br>
-
-                <input type="checkbox" id="lembrar" name="lembrar">
-                <label for="lembrar">Lembrar-me</label><br><br>
-
-            
-                <input type="submit" value="Entrar" class="form-button">
-            </form>
-            <!-- fornece a área de status usada pelo cadastrar.js. -->
-            <p id="message" role="status" aria-live="polite"></p>
-            <br>
-            <p class="center">Já possui uma conta? <a href="login.html">Acesse aqui</a>.</p>
+        <div class="bolhas"> <!--Circulos de decoração espalhados na página-->
+            <span class="circulo circulo1"></span>
+            <span class="circulo circulo2"></span>
+            <span class="circulo circulo3"></span>
+            <span class="circulo circulo4"></span>
+            <span class="circulo circulo5"></span>
+            <span class="circulo circulo6"></span>
+            <span class="circulo circulo7"></span>
+            <span class="circulo circulo8"></span>
+        </div>
+        <section id="inicio"> <!--Seção para preechimento do formulário de cadastro-->
+            <h1 class="center">Crie sua conta</h1>
+            <div class="form"> <!--Campo em contorno do formulário-->
+            <form action="painelcursos.html" method="get" class="formulario"> <!--Formulário-->
+            <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" placeholder="Digite seu nome completo...">
             </div>
+
+            <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Digite seu email...">
+            </div>
+
+            <div class="linha"> <!--Seção para alinhamento de 3 campos na mesma linha-->
+
+                <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
+                    <label for="data">Data de nascimento:</label>
+                    <input type="date" id="data">
+                </div>
+
+                <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
+                    <label for="celular">Celular:</label>
+                    <input type="tel" id="celular" placeholder="Número com DDD...">
+                </div>
+
+                <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
+                    <label for="cidade">Localidade:</label>
+                    <div class="localidade">
+                        <input type="text" id="cidade" placeholder="Cidade">
+
+                        <select id="estado">
+                            <option value="UF">UF</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MG">MG</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="senhas">
+            <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
+                <label for="senha">Crie sua senha:</label>
+                <input type="password" id="senha" placeholder="Digite sua senha..."><br>
+            </div>
+
+            <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
+                <label for="confirmar">Confirme sua senha:</label>
+                <input type="password" id="confirmar" placeholder="Confirme a senha...">
+            </div>
+            </div>
+            </div>
+
+            <div class="regras-senha"> <!--Especificações para criação de senha-->
+                <ul>
+                    <li>Sua senha deve conter 8 caracteres;</li>
+                    <li>Sua senha deve conter números;</li>
+                    <li>Sua senha deve conter caracteres especiais;</li>
+                </ul>
+            </div>
+            <label for="termos" class="termos"> <!--Opção de selecionar os termos de uso-->
+                <input type="checkbox" id="termos" required>
+                Aceito todos os <a href="#">Termos de Uso</a>
+            </label>
+            <input type="submit" value="Criar Conta" class="form-button"> <!--Botão para criar conta-->
+            </form>
         </section>
     </main>
 
     <footer> <!-- Rodapé -->
-        <ul class="footer-links">
+        <ul class="footer-links"> <!--Coluna a esquerda no footer-->
             <div class="rodape-links">
             <li><a href="#">Política e Termos de uso</a></li>
             <li><a href="#">Cursos</a></li>
             <li><a href="#">Vagas</a></li>
             </div>
         </ul>
-        <ul class="footer-links">
+        <ul class="footer-links"> <!--Coluna centralizada no footer-->
             <div class="rodape-links">
             <li><a href="#">InsertV@gmail.com</a></li>
             <li><a href="#">(11) 98877 9625</a></li>
             <li><a href="#">@InsertV</a></li>
             </div>
         </ul>
-        <ul class="footer-links">
+        <ul class="footer-links"> <!--Coluna a direita no footer-->
             <div class="rodape-links">
             <li><a href="#">Rua InsertV, 88</a></li>
             <li><a href="#">Diadema - SP</a></li>
