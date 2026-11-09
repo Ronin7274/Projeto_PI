@@ -1,59 +1,81 @@
 const loginForm = document.getElementById("form_login");
 const message = document.getElementById("message");
-const botao = loginForm.querySelector('input[type="submit"]');
- 
-loginForm.addEventListener("submit", async (event) => {
-  event.preventDefault();
-  message.textContent = "";
-  botao.disabled = true; // evita cliques repetidos enquanto envia
- 
-  try {
-    const email = document.getElementById("email").value.trim();
-    const senha = document.getElementById("senha").value;
- 
-    const response = await fetch("/api/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, senha })
-    });
- 
-    const texto = await response.text();
-    let data = {};
-    try {
-      data = texto ? JSON.parse(texto) : {};
-    } catch {
-      data = {};
-    }
- 
-    if (!response.ok) {
-      throw new Error(
-        data.error ||
-          `O servidor respondeu com erro ${response.status}. ` +
-          "Confirme que está acessando a página por http://localhost:3000"
-      );
-    }
- 
-    // "Lembrar-me" marcado: o token fica salvo mesmo fechando o navegador.
-    // Desmarcado: vale só enquanto a aba estiver aberta.
-    const storage = document.getElementById("lembrar").checked
-      ? localStorage
-      : sessionStorage;
- 
-    storage.setItem("token", data.token);
-    storage.setItem("candidato", JSON.stringify(data.candidato));
- 
-    message.textContent = `Bem-vindo, ${data.candidato.nome}!`;
- 
-    // se não quiser redirecionar, apague a linha abaixo
-    setTimeout(() => { window.location.href = "painelvagas.html"; }, 800);
-  } catch (error) {
-    console.error("login pelo frontend falhou:", error);
-    // TypeError = o fetch nem chegou ao servidor (servidor desligado, rede caída)
-    message.textContent =
-      error instanceof TypeError
-        ? "Não foi possível conectar-se ao servidor."
-        : error.message || "Não foi possível fazer o login.";
-  } finally {
-    botao.disabled = false; // roda sempre, com sucesso ou erro
+
+// Se algum id sumir do HTML, o console diz exatamente o que faltou.
+if (!loginForm || !message) {
+  console.error(
+    "login.js: não encontrei #form_login e/ou #message em login.html. Confira os ids."
+  );
+} else {
+  iniciarLogin();
+}
+
+// Busca um elemento pelo id; se não existir, lança um erro com mensagem clara.
+function pegar(id) {
+  const elemento = document.getElementById(id);
+  if (!elemento) {
+    throw new Error(`O campo #${id} não existe no HTML.`);
   }
-});
+  return elemento;
+}
+
+function iniciarLogin() {
+  const botao = loginForm.querySelector('input[type="submit"]');
+
+  loginForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    message.textContent = "";
+    if (botao) botao.disabled = true;
+
+    try {
+      const email = pegar("email").value.trim();
+      const senha = pegar("senha").value;
+
+      const response = await fetch("/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, senha })
+      });
+
+      const texto = await response.text();
+      let data = {};
+      try {
+        data = texto ? JSON.parse(texto) : {};
+      } catch {
+        data = {};
+      }
+
+      if (!response.ok) {
+        throw new Error(
+          data.error ||
+            `O servidor respondeu com erro ${response.status}. ` +
+            "Confirme que está acessando a página por http://localhost:3000"
+        );
+      }
+
+      // "Lembrar-me" marcado: token salvo mesmo fechando o navegador.
+      // Desmarcado: vale só enquanto a aba estiver aberta.
+      const storage = pegar("lembrar").checked ? localStorage : sessionStorage;
+
+      try {
+        storage.setItem("token", data.token);
+        storage.setItem("candidato", JSON.stringify(data.candidato));
+      } catch (erroStorage) {
+        console.warn("Não foi possível guardar a sessão:", erroStorage);
+      }
+
+      message.textContent = `Bem-vindo, ${data.candidato.nome}!`;
+
+      // destino que o formulário antigo usava em action="painelvagas.html"
+      setTimeout(() => { window.location.href = "painelvagas.html"; }, 800);
+    } catch (error) {
+      console.error("login pelo frontend falhou:", error);
+      message.textContent =
+        error instanceof TypeError
+          ? "Não foi possível conectar-se ao servidor."
+          : error.message || "Não foi possível fazer o login.";
+    } finally {
+      if (botao) botao.disabled = false;
+    }
+  });
+}
