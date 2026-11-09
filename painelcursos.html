@@ -5,114 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel de Cursos</title>
     <link rel="icon" href="img/InsertVLogopng.png">
-    <link rel="stylesheet" href="stylepvagas.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="estilizacao/stylepcursos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!--Font awesome é uma biblioteca de icones e ferramentas para adicionar icones vetorias na página sem precisar abaixar o arquivo SVG-->
 </head>
 <body>
-    <header>
-        <nav>
-            <img src="img/imgInsertVlogo.svg" alt="Logo do Projeto Integrador" width="100">
+    <header> <!--Cabeçalho da página-->
+        <nav> <!--Navegação da página-->
+            <img src="img/imgInsertVlogo.svg" alt="Logo do Projeto Integrador">
             <ul>
-                <li><a href="index.html">Início</a></li>
                 <li><a href="painelvagas.html">Vagas</a></li>
-                <li><a href="painelcursos.html">Cursos</a></li>
+                <li><a href="painelcursos.html" class="ativo">Cursos</a></li>
+                <li><a href="perfil.html">Meu perfil</a></li>
             </ul>
-            <a href="#">
-            <div class="icone">
+            <a href="#"> <!--Área de direcionamento para perfil-->
+            <div class="icone"> <!--Icone de perfil-->
                 <i class="fa-regular fa-user"></i>
             </div> </a>
         </nav>
     </header>
 
-    <main>
-        <div class="dashboard">
-            <aside class="sidebar">
-            <h3 class="sidebar-title">CURSOS</h3>
-            <nav class="sidebar-menu">
-
-                <a href="#" class="menu-item">
-                    <span>Explorar Cursos</span>
-                </a>
-
-                <a href="#" class="menu-item">
-                    <span>Meus Cursos</span>
-                </a>
-
-                <a href="#" class="menu-item">
-                    <span>Cursos Favoritos</span>
-                </a>
-
-                <a href="#" class="menu-item">
-                    <span>Configurações</span>
-                </a>
-                    </nav>
-                </aside>
-        
-        <div class="conteudo">
-        <section id="conteudo-central">
-            <h1>Todos os Cursos</h1> 
-            <label for="Pesquisa"></label>
-            <div class="lupa">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="search" name="Pesquisa" placeholder="Buscar Cursos" class="pesquisa">
+    <main> <!--Conteúdo principal-->
+        <section id="inicio"> <!--Seção inicial da página-->
+        <div class="conteudo-inicio"> <!--Seção de posicionamento de texto e imagem-->
+            <div class="texto-inicio"><!--Seção de posicionamento de texto-->
+                <span class="categoria"><!--Icone de capelo(chapéu de formatura)-->
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Capacitação e Desenvolvimento Profissional
+                </span>
+                <h1>Aprenda e conquiste seu espaço</h1>
+                <p>Cursos práticos pensados para alavancar seu currículo e abrir portas para o mercado de trabalho com suporte ativo de mentores.</p>
             </div>
 
-            <div id="filtros">
-            <label for="Filtro">Filtrar por:</label>
-            <select name="Filtro" class="opções">
-                <option value="all">Todas</option>
-                <option value="htmlcss">HTML e CSS</option>
-                <option value="design">Design Digital</option>
-                <option value="marketing">Marketing</option>
-                <option value="cosmetico">Cosméticos</option>
-                <option value="Python">Python</option>
+            <div class="img-inicio"> <!--Seção para redimensionar imagem-->
+                <img src="img/img_painel_cursos.jpg" alt="Uma pessoa lendo o jornal sentado">
+            </div>
+        </div>
+        </section>
+
+        <section id="pesquisa"> <!--Seção de pesquisa da página-->
+            <div class="links"> <!--Links localizados abaixo da seção de inicio-->
+                <a href="#">Certificados oficiais</a>
+                <span class="bolinha"></span>
+                <a href="#">Plataforma certificada</a>
+                <span class="bolinha"></span>
+                <a href="#">Cursos 100% gratuitos</a>
+                <span class="bolinha"></span>
+                <a href="#">Aceito em todas as empresas em SP</a>
+            </div>
+
+            <div class="lupa"> <!--Campo de formulário de pesquisa-->
+                <i class="fa-solid fa-magnifying-glass"></i> <!--Icone de lupa-->
+                <input type="search" name="Pesquisa" placeholder="Qual habilidade você quer aprender hoje?" class="pesquisa">
+                <i class="fa-solid fa-briefcase" id="pasta"></i> <!--Icone de pasta-->
+            </div>
+            <label for="filtros">Filtros:</label>
+            <select name="filtros" id="inst">
+                <option value="Instituição">Instituição</option>
             </select>
-            </div>
+            <select name="filtros" id="duração">
+                <option value="Duração">Duração</option>
+            </select>
         </section>
 
-        <section id="descricao">
-            <div class="vaga">
-            <h3>Curso 1</h3> <!--Título do curso-->
-            <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Quia fugiat dolorum non, amet tempora nulla itaque, perspiciatis rem atque, natus corporis repellendus harum aliquam placeat quisquam. Laborum beatae distinctio ratione!</p> <!--Descrição do curso, como duração, matérias e etc.-->
-            <button>Inscrever-se</button> <em>Publicado há 2 dias</em>
+        <section id="cursos"> <!--Seção de diversidades de cursos-->
+            <p>Catálogo</p>
+            <h2>Cursos em destaque</h2>
+            <div class="lista-cursos"> <!--Seção para conjunto geral de cards dos cursos-->
+            <div class="card-curso"> <!--Seção individual para card de cursos-->
+                <img src="img/img_dev_web.jpg" alt="Imagem de um notebook, xícara de café, caderno com lápis e um celular em cima de uma mesa.">
+                <div class="info-curso"> <!--Seção de texto dentro dos cards-->
+                    <p>◷ 60 horas</p>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Aprenda HTML, CSS e JavaScript e desenvolva seus próprios projetos.</p>
+                    <span class="localidade">FATEC DIADEMA</span>
+                    <button>Inscrever-se</button>
+                </div>
             </div>
 
-            <div class="vaga">
-            <h3>Curso 2</h3>
-            <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Quia fugiat dolorum non, amet tempora nulla itaque, perspiciatis rem atque, natus corporis repellendus harum aliquam placeat quisquam. Laborum beatae distinctio ratione!</p>
-            <button>Inscrever-se</button> <em>Publicado há 4 dias</em>
+            <div class="card-curso"> <!--Seção individual para card de cursos-->
+                <img src="img/img_oratoria.jpg" alt="Imagem preto e branco com poucas pessoas conversando e mexendo no celular.">
+                <div class="info-curso"> <!--Seção de texto dentro dos cards-->
+                    <p>◷ 42 horas</p>
+                    <h3>Oratória</h3>
+                    <p>Aprenda a se comunicar melhor e falar em público.</p>
+                    <span class="localidade">ALURA</span>
+                    <button>Inscrever-se</button>
+                </div>
             </div>
 
-            <div class="vaga">
-            <h3>Curso 3</h3> 
-            <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Quia fugiat dolorum non, amet tempora nulla itaque, perspiciatis rem atque, natus corporis repellendus harum aliquam placeat quisquam. Laborum beatae distinctio ratione!</p>
-            <button>Inscrever-se</button> <em>Publicado há 6 dias</em>
+            <div class="card-curso"> <!--Seção individual para card de cursos-->
+                <img src="img/img_js.jpg" alt="Imagem no centro de um complexo de um prédio circular.">
+                <div class="info-curso"> <!--Seção de texto dentro dos cards-->
+                    <p>◷ 5 horas</p>
+                    <h3>JavaScript</h3>
+                    <p>Aprenda a desenvolver aplicações utilizando JavaScript.</p>
+                    <span class="localidade">IFRS</span>
+                    <button>Inscrever-se</button>
+                </div>
+            </div>
+
+            <div class="card-curso"> <!--Seção individual para card de cursos-->
+                <img src="img/img_design.jpg" alt="Imagem de diversas pessoas em uma sala vendo uma apresentação em slides.">
+                <div class="info-curso"> <!--Seção de texto dentro dos cards-->
+                    <p>◷ 7 horas</p>
+                    <h3>Fundamentos de UI/UX Design</h3>
+                    <p>Conheça os princípios fundamentais do design de interfaces.</p>
+                    <span class="localidade">PROGRAMARIA</span>
+                    <button>Inscrever-se</button>
+                </div>
+            </div>
+
+            <div class="card-curso"> <!--Seção individual para card de cursos-->
+                <img src="img/img_excel.jpg" alt="Imagem de uma pessoa pagando por suas compras no caixa com um cartão.">
+                <div class="info-curso"> <!--Seção de texto dentro dos cards-->
+                    <p>◷ 42 horas</p>
+                    <h3>Excel e Análise de Dados</h3>
+                    <p>Aprenda a organizar e analisar dados utilizando Excel.</p>
+                    <span class="localidade">SANTANDER</span>
+                    <button>Inscrever-se</button>
+                </div>
+            </div>
             </div>
         </section>
-        </div>
-        </div>
     </main>
-    
-   <footer>
-        <ul class="footer-links">
-            <li>Política e Termos de uso</li>
-            <li>Cursos</li>
-            <li>Vagas</li>
-        </ul>
-        <ul class="footer-links">
-            <li>InsertV@gmail.com</li>
-            <li>(11) 98877 9625</li>
-            <li>@InsertV</li>
-        </ul>
-        <ul class="footer-links">
-            <li>Rua InsertV, 123</li>
-            <li>Diadema - SP</li>
-            <li>Voltar ao inicio</li>
-        </ul>
-
-        <div class="copy">
-            <a href="#">&copy;InsertV 2026 - Todos os direitos reservados.</a>
-        </div>
-    </footer>
 </body>
 </html>

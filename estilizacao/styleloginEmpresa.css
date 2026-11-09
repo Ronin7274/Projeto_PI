@@ -53,7 +53,7 @@ body {
     /* Desfoque do que está atrás */
     -webkit-backdrop-filter: blur(12px);
     /* Compatibilidade com Safari */
-    border-radius: 16px;
+    border-radius: 25px;
     /* Bordas arredondadas */
     border: 1px solid rgba(255, 255, 255, 0.2);
     /* Borda clara e fina */
@@ -61,7 +61,7 @@ body {
     width: 50%;
     display: block;
     margin: 15% auto;
-    height: 65%;
+    height: 70%;
 
 }
 
@@ -89,7 +89,8 @@ input {
     border-radius: 25px;
     padding: 15px 25px;
     margin-bottom: 15px;
-    background: var(--secondary-color);
+    color: black;
+    background: var(--branco);
     outline: none;
 }
 
@@ -98,7 +99,7 @@ input:focus {
 }
 
 input::placeholder {
-    color: #aca9a9ad;
+    color: #867f7fad;
     font-size: 12px;
 }
 
@@ -109,6 +110,7 @@ input::placeholder {
     text-decoration: none;
     margin-bottom: 10px;
 }
+
 .senha-esquecida:hover {
     font-weight: 600;
 }
@@ -188,7 +190,9 @@ input::placeholder {
 }
 
 .img-fluid {
-    margin: 75px 0;
+    margin: 80px 60px;
+    width: 500px;
+    height: 500px;
 }
 
 /*Responsividade */

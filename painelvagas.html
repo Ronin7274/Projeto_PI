@@ -3,121 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel de Vagas</title>
+    <title>Painel de vagas</title>
     <link rel="icon" href="img/InsertVLogopng.png">
-    <link rel="stylesheet" href="stylepvagas.css">
+    <link rel="stylesheet" href="estilizacao/stylepvagas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
+   <header> <!--Cabeçalho da página-->
+        <nav> <!--Navegação entre as páginas-->
             <img src="img/imgInsertVlogo.svg" alt="Logo do Projeto Integrador">
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="painelvagas.html">Vagas</a></li>
+                <li><a href="painelvagas.html" class="ativo">Vagas</a></li>
                 <li><a href="painelcursos.html">Cursos</a></li>
+                <li><a href="perfil.html">Meu perfil</a></li>
             </ul>
             <a href="#">
             <div class="icone">
-                <i class="fa-regular fa-user"></i>
+                <i class="fa-regular fa-user"></i> <!--Icone de perfil-->
             </div> </a>
         </nav>
     </header>
 
-    <main>
-        <div class="dashboard">
-            <aside class="sidebar">
-            <h3 class="sidebar-title">VAGAS</h3>
-            <nav class="sidebar-menu">
-
-                <a href="#" class="menu-item">
-                    <span>Explorar Vagas</span>
-                </a>
-
-                <a href="#" class="menu-item">
-                    <span>Minhas Candidaturas</span>
-                </a>
-
-                <a href="#" class="menu-item">
-                    <span>Vagas Favoritas</span>
-                </a>
-
-                <a href="#" class="menu-item">
-                    <span>Configurações</span>
-                </a>
-                    </nav>
-                </aside>
-            <div class="conteudo">
-            <section id="conteudo-central">
-                <h1>Todas as Vagas</h1> 
-                <div class="lupa">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="search" name="Pesquisa" placeholder="Buscar Vagas" class="pesquisa">
+    <section class="banner"> <!-- APRESENTAÇÃO E PESQUISA -->
+        <div class="banner-conteudo">
+            <h1>Descubra a vaga ideal para impulsionar sua jornada</h1>
+            <p>Conectamos você a empresas de tecnologia, indústria e serviços em Diadema, Grande ABC e<br> posições 100% remotas.</p>
+            <form class="pesquisa"> <!--Formulário de pesquisa para vagas-->
+                <div class="campo"> <!--Campo para colocar cargo da vaga-->
+                    <label>Cargo ou tecnologia</label>
+                    <input type="text" placeholder="Desenvolvedor Front and Jr">
                 </div>
 
-                <div id="filtros">
-                <label for="Filtro">Filtrar por:</label>
-                <select name="Filtro" class="opções">
-                    <option value="all">Todas</option>
-                    <option value="tech">Tecnologia</option>
-                    <option value="design">Design</option>
-                    <option value="marketing">Marketing</option>
-                    <option value="cosmetico">Cosméticos</option>
-                </select>
-
-                <label for="Tipo">Tipo:</label>
-                <select name="Tipo" class="opções">
-                    <option value="all">Todos</option>
-                    <option value="fulltime">Tempo Integral</option>
-                    <option value="parttime">Meio Período</option>
-                    <option value="internship">Estágio</option>
-                </select>
-                </div>
-            </section>
-
-            <section id="descricao">
-                <div class="vaga">
-                <h3>Vaga 1</h3> <!--Vaga referente a tal função-->
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia fugiat dolorum non, amet tempora nulla itaque, perspiciatis rem atque, natus corporis repellendus harum aliquam placeat quisquam. Laborum beatae distinctio ratione!</p> <!--Descrição da vaga, como localização, benefícios, etc.-->
-                <button>Candidatar-se</button> <em>Publicada há 2 dias</em> 
+                <div class="campo campo-select">
+                    <label>Localização</label> <!--Campo de seleção de região da vaga-->
+                    <div class="select-conteudo">
+                        <i class="fa-solid fa-location-dot"></i> <!--Icone de localização-->
+                        <select>
+                            <option>Diadema - SP</option>
+                            <option>São Paulo - SP</option>
+                        </select>
+                        <i class="fa-solid fa-angle-down"></i> <!--Icone de seta para baixo-->
+                    </div>
                 </div>
 
-                <div class="vaga">
-                <h3>Vaga 2</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, numquam aliquid commodi similique, voluptatem ipsam minima aspernatur cupiditate natus esse blanditiis distinctio quasi nobis exercitationem architecto nisi deserunt officiis quas?</p>
-                <button>Candidatar-se</button> <em>Publicada há 5 dias</em> 
+                <div class="campo campo-select"> <!--Campo de seleção para tipo de modalidade de vaga-->
+                    <label>Modalidade</label>
+                    <div class="select-conteudo">
+                        <i class="fa-solid fa-briefcase"></i> <!--Icone de maleta-->
+                        <select>
+                            <option>Todos os tipos</option>
+                            <option>Presencial</option>
+                            <option>Híbrido</option>
+                            <option>Remoto</option>
+                        </select>
+                        <i class="fa-solid fa-angle-down"></i> <!--Icone de seta para baixo-->
+                    </div>
+                </div>
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </section>
+
+    <main> <!-- CONTEÚDO PRINCIPAL -->
+        <section class="lista-vagas"> <!-- LISTA DE VAGAS -->
+            <h3>68 vagas <span>encontradas para "Front-end & tecnologia"</span></h3>
+            <article class="vaga selecionada">
+                <div class="vaga-topo">
+                    <div class="empresa-logo">TV</div>
+                    <div>
+                        <h4>Desenvolvedor Front-end Jr</h4>
+                        <p>TechV Soluções Digitais</p>
+                    </div>
                 </div>
 
-                <div class="vaga">
-                <h3>Vaga 3</h3> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia fugiat dolorum non, amet tempora nulla itaque, perspiciatis rem atque, natus corporis repellendus harum aliquam placeat quisquam. Laborum beatae distinctio ratione!</p>
-                <button>Candidatar-se</button> <em>Publicada há 1 semana</em> 
+                <div class="tags">
+                    <span>Efetivo CLT</span>
+                    <span>Híbrido / Diadema</span>
+                    <span>Júnior</span>
                 </div>
-            </section>
+                <strong>R$ 2.400 - R$ 3.200</strong>
+            </article>
+
+            <article class="vaga">
+                <div class="vaga-topo">
+                    <div class="empresa-logo"><i class="fa-solid fa-building"></i></div>
+                    <div>
+                        <h4>Analista de Suporte Jr</h4>
+                        <p>LogiTech ABC</p>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span>CLT</span>
+                    <span>Diadema - Centro</span>
+                    <span>Iniciante</span>
+                </div>
+                <strong>R$ 2.200 + VT + VR</strong>
+            </article>
+
+            <article class="vaga">
+                <div class="vaga-topo">
+                    <div class="empresa-logo">DP</div>
+                    <div>
+                        <h4>Desenvolvedor React / Node Pleno</h4>
+                        <p>Delta Partner Serviços</p>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span>PJ ou CLT</span>
+                    <span>Presencial Diadema</span>
+                    <span>Pleno</span>
+                </div>
+                <strong>R$ 5.500 - R$ 7.000</strong>
+            </article>
+        </section>
+
+        <section class="detalhes-vaga"> <!-- DETALHES DA VAGA -->
+            <div class="detalhes-topo"> <!--Detalhes ao topo da página da vaga-->
+                <div class="empresa-logo logo-grande">TV</div> <!--Logo marca da empresa-->
+                <div class="titulo-vaga"> <!--Informações básicas da vaga-->
+                    <span>TechV Soluções Digitais</span>
+                    <h2>Desenvolvedor Front-end Jr</h2>
+                    <p><i class="fa-solid fa-location-dot"></i><!--Icone de localização--> Diadema - SP • Modelo Híbrido (3x presencial / 3x home office)</p>
+                </div>
             </div>
-        </div>
-    </main>
-    
-    <footer>
-        <ul class="footer-links">
-            <li>Política e Termos de uso</li>
-            <li>Cursos</li>
-            <li>Vagas</li>
-        </ul>
-        <ul class="footer-links">
-            <li>InsertV@gmail.com</li>
-            <li>(11) 98877 9625</li>
-            <li>@InsertV</li>
-        </ul>
-        <ul class="footer-links">
-            <li>Rua InsertV, 123</li>
-            <li>Diadema - SP</li>
-            <li>Voltar ao inicio</li>
-        </ul>
 
-        <div class="copy">
-            <a href="#">&copy;InsertV 2026 - Todos os direitos reservados.</a>
-        </div>
-    </footer>
+            <div class="informacoes"> <!--Seção de conjunto das tags informativas nas vagas-->
+                <div class="info-item"> <!--Seção individual das tags informativas-->
+                    <p>Salário Mensal</p>
+                    <span>R$ 2.400 - R$ 3.200</span>
+                </div>
+
+                <div class="info-item"> <!--Seção individual das tags informativas-->
+                    <p>Contratação</p>
+                    <span>CLT Efetivo</span>
+                </div>
+
+                <div class="info-item"> <!--Seção individual das tags informativas-->
+                    <p>Nível de Carreira</p>
+                    <span>Júnior (Entry-level)</span>
+                </div>
+
+                <button class="btn-candidatar"> <!--Botão de candidatar-se para vaga-->
+                    <i class="fa-solid fa-paper-plane"></i><!--Icone de envio--> Candidatar-se à vaga
+                </button>
+            </div>
+
+            <div class="descricao"> <!-- DESCRIÇÃO -->
+                <h4><i class="fa-solid fa-circle-info"></i> Sobre a vaga</h4> <!--Icone de informações-->
+                <p>A <strong>TechV Soluções Digitais</strong> é uma parceira do programa de empregabilidade da InsertV. Estamos expandindo nossa squad de produtos digitais e buscando um desenvolvedor(a) Front-end Júnior comprometido, com boa base conceitual e paixão por interfaces acessíveis e fluidas. Você atuará lado a lado com designers e programadores sêniores, construindo componentes modernos para aplicações corporativas, integrando APIs REST e participando ativamente de code reviews para acelerar o seu crescimento técnico.</p>
+                
+                <h4>Requisitos & Habilidades</h4>
+                <ul>
+                    <li>HTML5 & CSS3 Moderno</li>
+                    <li>JavaScript (ES6+)</li> 
+                    <li>React ou Vue.js (Básico a Intermediário)</li>
+                    <li>Git & GitHub no fluxo diário</li>
+                    <li>Design Responsivo & Mobile-First</li>
+                    <li>Figma (Inspeção de Layouts)</li>
+                    <li>Consumo de APIs REST / JSON</li>
+                    <li>Disponibilidade para encontros presenciais no polo de Diadema (2x na semana).</li> 
+                    <li>Portfólio com projetos reais ou estudos de caso funcionais hospedados na web.</li> 
+                    <li>Graduação em andamento ou completa em TI, Análise de Sistemas ou certificações InsertV.</li>
+                </ul>
+            </div>
+
+            <div class="cursos-recomendados">
+                <h4>Cursos Recomendados</h4>
+                <div class="cursos">
+                    <button>Desenvolvimento Web</button>
+                    <button>Git/Github</button>
+                    <button>React</button>
+                </div>
+            </div>
+
+            <div class="beneficios"> <!-- Campo de benefícios -->
+                <h4>Benefícios oferecidos</h4>
+                <div class="beneficios-grid"> <!--Seção geral de benefícios-->
+                    <div class="beneficio"> <!--Seção individual de benefícios-->
+                        <strong>Vale Refeição e Alimentação</strong>
+                        <p>R$ 30,50 por dia útil em cartão flexível.</p>
+                    </div>
+
+                    <div class="beneficio"> <!--Seção individual de benefícios-->
+                        <strong>Plano de Saúde e Odontológico</strong>
+                        <p>Cobertura nacional incluindo saúde e coparticipação.</p>
+                    </div>
+
+                    <div class="beneficio"> <!--Seção individual de benefícios-->
+                        <strong>Bolsa Incentivo Academy</strong>
+                        <p>Acesso a cursos gratuitos e trilhas de tecnologia.</p>
+                    </div>
+
+                    <div class="beneficio"> <!--Seção individual de benefícios-->
+                        <strong>Auxílio Home Office</strong>
+                        <p>Ajuda de custo mensal de R$ 150 para internet e energia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="localizacao"> <!-- Seção de localização da empresa -->
+                <h4>Localização do setor</h4>
+                <img src="img/img_loc_pvagas.jpg" alt="Localização da empresa">
+                <p>Rua InvertV, 85 - Centro Empresarial Diadema</p>
+                <span>A 5 min do Terminal Metropolitano Diadema</span>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

@@ -42,6 +42,7 @@ header nav a {
 
 .icone i {
     font-size: 22px;
+    color: black;
 }
 
 .icone {
@@ -186,6 +187,12 @@ main {
     box-shadow: 0 0 12px #00000030;
 }
 
+.card-sobre,
+.card-beneficios {
+    position: relative;
+    padding-bottom: 30px;
+}
+
 .card-sobre h3 {
     color: #003b91;
     font-size: 18px;
@@ -202,6 +209,32 @@ main {
 .card-sobre .t-azul {
     margin-top: 8px;
     color: #187FC9C0;
+}
+
+.edit i {
+    font-size: 20px;
+    color: white;
+}
+
+.edit {
+    background-color: #003b91;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit:hover {
+    background-color: #0353cc;
+}
+
+.card-sobre .edit,
+.card-beneficios .edit {
+    position: absolute;
+    right: 15px;
+    bottom: 13px;
 }
 
 /* Benefícios */
@@ -281,6 +314,13 @@ main {
     color: #333;
     font-size: 14px;
     line-height: 1.4;
+}
+
+.titulo-cultura,
+.sede-central h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 /* Sede central */

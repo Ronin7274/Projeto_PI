@@ -27,8 +27,8 @@ nav {
 }
 
 nav img {
-    width: 190px;
-    height: 190px;
+    width: 220px;
+    height: 220px;
     object-fit: contain;
 }
 
@@ -44,6 +44,7 @@ nav ul {
 
 nav li {
     list-style: none;
+    border-bottom: 2px solid transparent;
 }
 
 nav a {
@@ -52,7 +53,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #0841c9;
+    border-bottom: 2px solid #0841c9;
 }
 
 main h1 {
@@ -71,6 +72,7 @@ main p {
 .texto {
     margin: 0 15%;
 }
+
 #inicio {
     display: flex;
     width: 100%;
@@ -84,6 +86,7 @@ main p {
     top: -70px;
     left: 80px;
 }
+
 #inicio h1 {
     margin-bottom: 10px;
     line-height: 40px;
@@ -95,29 +98,43 @@ main p {
 }
 
 #inicio form {
-    width: 450px;
+    width: 400px;
+}
+
+.senha {
+    color: black;
+}
+
+.empresa {
+    color: red;
 }
 
 .form-label {
     display: block;
-    width: 115%;
+    width: 90%;
     box-sizing: border-box;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px 15px;
 }
 
 .form-button {
     display: block;
-    width: 115%;
+    width: 90%;
     background-color: #0841c9;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px 30px;
     margin-bottom: 15px;
     font-weight: 700;
     cursor: pointer;
+    transition: 0.2s;
+}
+
+.form-button:hover {
+    background-color: #0a2f9c;
+    transform: scale(1.05);
 }
 
 footer {
