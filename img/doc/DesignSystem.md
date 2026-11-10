@@ -1,18 +1,18 @@
 ---
-name: Vanguard Tech Minimal
+name: Tecnologia Fluida e Precisão Digital
 colors:
-  surface: '#faf8ff'
-  surface-dim: '#d7d9e8'
-  surface-bright: '#faf8ff'
+  surface: '#f9f9f9'
+  surface-dim: '#dadada'
+  surface-bright: '#f9f9f9'
   surface-container-lowest: '#ffffff'
-  surface-container-low: '#f2f3ff'
-  surface-container: '#ebedfc'
-  surface-container-high: '#e5e7f6'
-  surface-container-highest: '#dfe2f1'
-  on-surface: '#171b26'
+  surface-container-low: '#f4f3f3'
+  surface-container: '#eeeeee'
+  surface-container-high: '#e8e8e8'
+  surface-container-highest: '#e2e2e2'
+  on-surface: '#1a1c1c'
   on-surface-variant: '#444651'
-  inverse-surface: '#2c303b'
-  inverse-on-surface: '#eef0ff'
+  inverse-surface: '#2f3131'
+  inverse-on-surface: '#f1f1f1'
   outline: '#747683'
   outline-variant: '#c4c6d3'
   surface-tint: '#3d5aab'
@@ -25,10 +25,10 @@ colors:
   on-secondary: '#ffffff'
   secondary-container: '#4369ef'
   on-secondary-container: '#fffbff'
-  tertiary: '#001f38'
+  tertiary: '#3d0d00'
   on-tertiary: '#ffffff'
-  tertiary-container: '#00355a'
-  on-tertiary-container: '#4aa0ec'
+  tertiary-container: '#621900'
+  on-tertiary-container: '#f97345'
   error: '#ba1a1a'
   on-error: '#ffffff'
   error-container: '#ffdad6'
@@ -41,56 +41,56 @@ colors:
   secondary-fixed-dim: '#b7c4ff'
   on-secondary-fixed: '#001452'
   on-secondary-fixed-variant: '#0038b6'
-  tertiary-fixed: '#d0e4ff'
-  tertiary-fixed-dim: '#9bcbff'
-  on-tertiary-fixed: '#001d34'
-  on-tertiary-fixed-variant: '#004a7a'
-  background: '#faf8ff'
-  on-background: '#171b26'
-  surface-variant: '#dfe2f1'
+  tertiary-fixed: '#ffdbd0'
+  tertiary-fixed-dim: '#ffb59d'
+  on-tertiary-fixed: '#390b00'
+  on-tertiary-fixed-variant: '#842500'
+  background: '#f9f9f9'
+  on-background: '#1a1c1c'
+  surface-variant: '#e2e2e2'
 typography:
-  display:
+  display-xl:
     fontFamily: Inter
     fontSize: 56px
-    fontWeight: '800'
+    fontWeight: '700'
     lineHeight: 64px
     letterSpacing: -0.03em
-  display-mobile:
+  display-xl-mobile:
     fontFamily: Inter
     fontSize: 36px
-    fontWeight: '800'
+    fontWeight: '700'
     lineHeight: 44px
-    letterSpacing: -0.025em
+    letterSpacing: -0.02em
   headline-lg:
     fontFamily: Inter
     fontSize: 40px
-    fontWeight: '700'
+    fontWeight: '600'
     lineHeight: 48px
     letterSpacing: -0.02em
   headline-lg-mobile:
     fontFamily: Inter
     fontSize: 28px
-    fontWeight: '700'
-    lineHeight: 36px
-    letterSpacing: -0.02em
-  headline-md:
-    fontFamily: Inter
-    fontSize: 28px
     fontWeight: '600'
     lineHeight: 36px
     letterSpacing: -0.015em
+  headline-md:
+    fontFamily: Inter
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.01em
   headline-sm:
     fontFamily: Inter
     fontSize: 20px
     fontWeight: '600'
     lineHeight: 28px
-    letterSpacing: -0.01em
+    letterSpacing: -0.005em
   title-md:
     fontFamily: Inter
-    fontSize: 16px
-    fontWeight: '600'
-    lineHeight: 24px
-    letterSpacing: -0.005em
+    fontSize: 18px
+    fontWeight: '500'
+    lineHeight: 26px
+    letterSpacing: 0em
   body-lg:
     fontFamily: Inter
     fontSize: 18px
@@ -99,28 +99,34 @@ typography:
     letterSpacing: 0em
   body-md:
     fontFamily: Inter
-    fontSize: 14px
+    fontSize: 16px
     fontWeight: '400'
-    lineHeight: 22px
+    lineHeight: 24px
     letterSpacing: 0em
   body-sm:
     fontFamily: Inter
-    fontSize: 12px
+    fontSize: 14px
     fontWeight: '400'
-    lineHeight: 18px
-    letterSpacing: 0.01em
-  label-lg:
+    lineHeight: 20px
+    letterSpacing: 0.005em
+  label-md:
     fontFamily: Inter
     fontSize: 14px
-    fontWeight: '600'
+    fontWeight: '500'
     lineHeight: 20px
     letterSpacing: 0.01em
   label-sm:
     fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 16px
+    letterSpacing: 0.02em
+  caption:
+    fontFamily: Inter
     fontSize: 11px
     fontWeight: '500'
-    lineHeight: 16px
-    letterSpacing: 0.04em
+    lineHeight: 14px
+    letterSpacing: 0.03em
 rounded:
   sm: 0.25rem
   DEFAULT: 0.5rem
@@ -131,96 +137,95 @@ rounded:
 spacing:
   gutter: 1.5rem
   gutter-mobile: 1rem
-  margin: 3rem
+  margin: 2rem
   margin-mobile: 1rem
-  space-xs: 0.25rem
-  space-sm: 0.5rem
+  space-2xs: 0.25rem
+  space-xs: 0.5rem
+  space-sm: 0.75rem
   space-md: 1rem
   space-lg: 1.5rem
-  space-xl: 2.5rem
+  space-xl: 2rem
+  space-2xl: 3rem
+  space-3xl: 4.5rem
 ---
 
-## Brand & Style
+## Marca e Estilo Visual
 
-The design system establishes a high-precision, forward-looking visual identity tailored for modern technology platforms, next-generation digital services, and product ecosystems. 
+O design system estabelece uma experiência contemporânea, limpa e de forte traço tecnológico para o ecossistema do produto, combinando minimalismo funcional e estética de software de alta performance. O objetivo é transmitir precisão analítica, confiança técnica e fluidez sem sobrecarregar a cognição do usuário.
 
-### Brand Personality & Philosophy
-- **Precision & Innovation:** Interfaces are engineered to feel sharp, deterministic, and frictionless.
-- **Architectural Clarity:** Layouts favor structural grid rigor, intentional density, and purposeful whitespace over decorative noise.
-- **Subtle Modernism:** A hybrid aesthetic fusing modern high-density SaaS elegance with subtle glassmorphic illumination and crisp micro-borders.
+A identidade visual apoia-se em princípios de clareza espacial, contraste intencional e microinterações táteis sutis:
+- **Atmosfera Técnica e Confiável:** Linhas precisas, superfícies neutras equilibradas e acentos de cor saturados com finalidade funcional específica.
+- **Público-alvo:** Usuários técnicos, gestores de operações digitais e consumidores de tecnologia que valorizam agilidade, escaneabilidade imediata e acabamento moderno.
+- **Linguagem Estética:** Minimalismo tecnológico enriquecido com camadas tonais neutras e iluminação focal controlada em pontos de conversão e elementos de navegação primários.
 
-### Emotional Response
-The interface inspires trust, technical mastery, and effortless control, allowing complex digital interactions to feel immediate and clean.
+## Cores
 
-## Colors
+A hierarquia cromática deste design system é orientada pela sobriedade operacional dos tons neutros e pelo impacto concentrado do azul profundo como motor primário de interação:
 
-The palette is engineered natively for light mode, establishing depth through crisp light foundations paired with deep royal blue and electric secondary accents.
+- **Primária (`#022C7D`):** Azul profundo tecnológico, reservado exclusivamente para chamadas de ação primárias (CTAs), estados ativos cruciais e indicadores de progresso dominante.
+- **Secundária (`#0841C9`):** Azul vibrante de precisão, utilizado para reforçar status positivos, métricas em alta e confirmações de valor.
+- **Terciária (`#FE7648`):** Laranja energético, aplicado em ilustrações de produto, gráficos de suporte e badges de funcionalidade.
+- **Neutro Profundo (`#E1E1E1`):** Cinza claro estrutural para garantir legibilidade máxima e contraste equilibrado.
+- **Superfícies e Bordas:** Construídas sobre uma escala de cinzas frios (`#F8FAFC`, `#EEF2F6`, `#FFFFFF`) com traçados sutis (`#E2E8F0`) para manter o aspecto leve e luminoso.
 
-### Color Hierarchy & Roles
-- **Primary (`#022C7D` - Deep Royal Blue):** Reserved for primary actions, active state outlines, focus triggers, and key brand highlights.
-- **Secondary (`#0841C9` - Electric Accent):** Utilized for secondary interactive signals, analytics indicators, feature badges, and complementary gradients.
-- **Tertiary (`#187FC9` - Bright Azure):** Drives interactive callouts, active system statuses, and affirmative indicators.
-- **Neutral (`#0B0F19` - Deep Obsidian):** Used for structural contrast and high-legibility text elements against light backgrounds.
-- **Semantic Accents:** Defined via `named_colors` to ensure strict accessible contrast for warnings, errors, and subtle ambient glows.
+## Tipografia
 
-## Typography
+O sistema tipográfico utiliza a família **Inter** de ponta a ponta, explorando a geometria neutra e a alta densidade de legibilidade em telas de qualquer resolução.
 
-The type system is built on **Inter**, delivering utilitarian legibility, high optical precision, and neutral technical authority.
+- **Títulos e Destaques de Alto Impacto:** Os níveis `display-xl` e `headline-lg` utilizam tracking negativo acentuado (`-0.03em` e `-0.02em`) com pesos estruturais (600 e 700), garantindo presença de marca sem perder rigor formal.
+- **Adaptação Responsiva:** Os níveis de exibição maiores possuem tokens de escala mobile dedicados para prevenir quebras deselegantes de linhas em smartphones mantendo leitura fluida.
+- **Corpo de Texto e Suporte:** O texto corrido adota entrelinhas generoso (1.5x a 1.55x) para conforto ocular contínuo, enquanto labels e identificadores técnicos recebem leve tracking positivo para diferenciação funcional imediata.
 
-### Typographic Hierarchy
-- **Display & Large Headlines:** Feature tighter letter tracking (`-0.02em` to `-0.03em`) and heavy weights (700–800) to create impact on hero modules and key marketing touchpoints.
-- **Body Content:** Tuned with balanced line heights (1.5x - 1.6x) and neutral tracking for sustained readability on dashboards and data views.
-- **Labels & Microcopy:** High-contrast, medium weights with expanded tracking (`0.01em` to `0.04em`) ensure instant recognition across badges, data tables, and input headers.
+## Layout e Espaçamento
 
-## Layout & Spacing
+O modelo espacial adota uma estrutura em grade fluida de 12 colunas para desktop (acima de 1024px), adaptando-se para 8 colunas em tablets (768px - 1023px) e 4 colunas em dispositivos móveis (abaixo de 768px). A largura máxima de contenção estrutural é fixada em `1200px` para preservar a tensão visual e o foco.
 
-A responsive 12-column fluid grid defines layout structures across widescreen and desktop monitors, collapsing systematically down to tablet and mobile form factors.
+- **Régua Modular:** Todos os afastamentos seguem incrementos estritos de 4px e 8px, garantindo proporcionalidade e ritmo composicional previsível.
+- **Margens de Seção:** As seções principais da página inicial alternam entre `space-2xl` e `space-3xl` para criar respiro visual editorial entre blocos conceituais.
+- **Espaçamento Interno:** Componentes fechados (como cards e menus flutuantes) combinam `space-md` e `space-lg` de preenchimento interno para balancear densidade e elegância.
 
-### Breakpoint Matrix
-- **Mobile (< 768px):** 4-column layout, `margin-mobile` (1rem), `gutter-mobile` (1rem).
-- **Tablet (768px – 1024px):** 8-column layout, 2rem margins, 1.25rem gutters.
-- **Desktop (> 1024px):** 12-column layout, `margin` (3rem), `gutter` (1.5rem), maximum container constraint of 1280px.
+## Elevação e Profundidade
 
-### Spacing Rules
-Component padding and inter-element relationships adhere strictly to the 4px/8px modular base scale (`space-xs` through `space-xl`), ensuring optical harmony between micro-elements and macro-containers.
+A profundidade é expressa primordialmente por meio de camadas tonais e contornos sutis de baixo contraste, complementados por sombras atmosféricas extremamente suaves e frias. O objetivo é manter a interface leve e plana, usando a elevação apenas para indicar interatividade e ordem de empilhamento.
 
-## Elevation & Depth
+- **Nível 0 (Plano de Fundo):** Superfície base do canvas com `#F8FAFC`, isenta de sombra.
+- **Nível 1 (Superfície Contida):** Cards padrão, listas e painéis de dados assentam em `#FFFFFF` delimitados por contorno suave (`1px solid #E2E8F0`) e uma sombra de dispersão difusa: `0 1px 3px rgba(11, 17, 29, 0.04), 0 1px 2px rgba(11, 17, 29, 0.02)`.
+- **Nível 2 (Interativo / Hover):** Ao passar o cursor ou focar em elementos navegáveis, a sombra se expande com tonalidade neutra: `0 8px 24px -4px rgba(11, 17, 29, 0.06), 0 2px 6px -1px rgba(11, 17, 29, 0.03)`.
+- **Nível 3 (Flutuante / Modais / Menus Dropdown):** Componentes contextuais destacados utilizam `0 20px 40px -8px rgba(11, 17, 29, 0.10)` combinados a leve desfoque de fundo (`backdrop-filter: blur(8px)`) e borda semi-translúcida.
 
-Visual hierarchy is constructed through tonal surface layering and low-contrast perimeter strokes, augmented by localized glow effects instead of heavy ambient drop shadows.
+## Formas e Geometria
 
-### Elevation Tiers
-1. **Level 0 (Canvas Base):** Ground layer using light canvas foundations. Zero elevation or borders.
-2. **Level 1 (Subsurface Cards & Insets):** Filled with structural containers, bordered by a subtle 1px stroke.
-3. **Level 2 (Interactive Floating Modules & Modals):** Filled with elevated surface tiers with a 12px backdrop blur (`backdrop-filter: blur(12px)`) and a crisper 1px border.
-4. **Active/Focus States:** Elevated surfaces emit an ambient perimeter illumination using `rgba(2, 44, 125, 0.25)` with a 16px blur radius, reinforcing physical responsiveness without visual clutter.
+O sistema utiliza a classificação de arredondamento nível 2 (Rounded), estabelecendo um raio padrão de `8px` (`0.5rem`) para componentes fundamentais. Essa geometria equilibra a postura tecnológica séria com cantos suavizados que convidam à interação digital.
 
-## Shapes
+- **Microcomponentes (Tags, Checkboxes, Inputs pequenos):** Raio de `6px` a `8px`.
+- **Contêineres e Cartões (`rounded-lg`):** Raio de `16px` (`1rem`), conferindo acabamento polido sem perder estrutura geométrica.
+- **Paineis Maiores e Banners (`rounded-xl`):** Raio de `24px` (`1.5rem`), destacando agrupamentos de conteúdo complexos.
+- **Botões Circulares / Pílulas Específicas:** Uso restrito de pílula completa (`9999px`) apenas para status pills, badges numéricos e tags de categoria.
 
-The interface embraces a balanced modern curvature (Level 2). This provides smooth, contemporary geometry while retaining geometric crispness suited for tech platforms.
+## Componentes
 
-- **Base Radius (0.5rem / 8px):** Applied to standard buttons, input controls, chips, and small panels.
-- **Medium Radius (1rem / 16px):** Applied to cards, preview panels, modal sheets, and dropdown containers.
-- **Large Radius (1.5rem / 24px):** Applied to hero wrapper containers, marketing banners, and floating navigational bars.
+### Botões
+- **Primário:** Fundo em `#022C7D`, texto em `#FFFFFF`, sem borda visível, padding vertical de `0.75rem` e horizontal de `1.5rem`, fonte `label-md`. No estado hover, escurece ligeiramente para `#011E57` com transição suave de 150ms.
+- **Secundário (Outline):** Borda de `1px solid #CBD5E1`, fundo transparente, texto em `#0B111D`. No hover, preenche com `#EEF2F6`.
+- **Terciário (Ghost):** Sem borda, cor `#64748B`, ganhando fundo `#F1F5F9` e texto `#0B111D` ao interagir.
 
-## Components
+### Chips e Badges
+- Elementos de altura compacta (`28px` a `32px`), raio de pílula ou `6px`.
+- Fundos suaves em tonalidade transparente (ex: `#022C7D` a 10% de opacidade) combinados com tipografia em peso `600` e cor sólida correspondente.
 
-### Buttons
-- **Primary:** Solid `#022C7D` background, white label (`label-lg`), 0.5rem radius, height 44px (desktop) / 48px (mobile). Hover initiates `#03399E` transition with a faint `accent-glow` shadow.
-- **Secondary:** Transparent fill with a 1px border, text in secondary tones. Hover shifts background to subtle overlays and border to `#022C7D`.
-- **Ghost / Text:** Borderless with minimal background wash on hover.
+### Campos de Entrada (Inputs)
+- Altura base de `44px` para mobile e desktop, fundo `#FFFFFF`, borda `1px solid #E2E8F0`, padding horizontal de `0.875rem`.
+- **Foco:** Substitui a borda pelo anel de foco primário em `#022C7D` (`box-shadow: 0 0 0 3px rgba(2, 44, 125, 0.15)`) sem deslocamento de layout.
+- Mensagens de auxílio e rótulos utilizam `label-sm` em `#64748B`.
 
-### Cards
-- **Base Structure:** Clean surface background, 1px perimeter border, 1rem corner radius, and `space-lg` internal padding.
-- **Interactive State:** Hover elevates border and adds a subtle vertical translate (-2px) with an ambient blue gradient rim light.
+### Caixas de Seleção e Botões de Opção
+- Checkbox quadrado com raio de `4px` e radio button perfeitamente circular de `18px`.
+- Em estado inativo, borda de `1.5px solid #CBD5E1`. Em estado ativo, preenchimento pleno em `#022C7D` com ícone de marcação nítido em branco.
 
-### Badges & Chips
-- **Status Badges:** Compact pills (radius 9999px) with semi-transparent tinted backgrounds, contrasting micro-borders, and `label-sm` text.
-- **Interactive Filter Chips:** Height 32px, `space-sm` horizontal padding, shifting from muted neutral outlines to active solid primary highlights.
+### Cartões (Cards)
+- Construídos com fundo `#FFFFFF`, borda sutil `#E2E8F0`, raio de `16px` e preenchimento interno de `1.5rem`.
+- Em cards clicáveis, o hover eleva sutilmente a peça com transição de elevação Nível 1 para Nível 2 e leve realce da borda para `#CBD5E1`.
 
-### Input Fields
-- **Container:** Height 44px, surface background, border 1px, radius 0.5rem, text `body-md`.
-- **Focus State:** 1px stroke of `#022C7D` paired with a 2px outer glow (`rgba(2, 44, 125, 0.2)`).
-- **Placeholder:** Styled with optical baseline centering.
-
-### Navigation Bar
-- **Floating Header:** Glassmorphic layout with a 16px blur, border-bottom, height 64px, holding logo, nav items with `label-lg` tracking, and primary CTA.
+### Elementos Especiais para a Página Inicial
+- **Barra de Navegação Superior:** Fixa com suporte a translucidez (`background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px)`), delimitada por borda inferior em `#E2E8F0`.
+- **Cartão de Demonstração Interativa:** Painel modular com cabeçalho de abas e viewport de pré-visualização com acabamento em cinza sutil `#EEF2F6` para contextualizar fluxos funcionais do produto.
