@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="icon" href="img/InsertVLogopng.png">
-    <link rel="stylesheet" href="estilizacao/stylelogin.css">
+    <link rel="stylesheet" href="stylelogin.css">
+    <!-- carrega o script de login depois que o HTML for lido (defer) -->
+    <script src="login.js" defer></script>
 </head>
 
 <body>
@@ -25,9 +27,9 @@
             <div class="texto"> <!--Seção para colocar conteúdo ao lado direito da página-->
                 <h1>Bem-vindo(a) de volta!</h1>
                 <p>Acesse sua conta ou cadastre-se por aqui.</p>
-                <form action="painelvagas.html" method="get"> <!--Formulário-->
+                <form id="form_login"> <!--Formulário-->
                     <label for="email"><strong>Email:</strong></label><br>
-                    <input type="text" id="email" name="email" placeholder="seuemail@gmail.com" required class="form-label"><br><br>
+                    <input type="email" id="email" name="email" placeholder="seuemail@gmail.com" required class="form-label"><br><br>
 
                     <label for="senha"><strong>Senha:</strong></label><br>
                     <input type="password" id="senha" name="senha" placeholder="Sua senha" required class="form-label">
@@ -38,6 +40,8 @@
 
                     <input type="submit" value="Entrar" class="form-button"> <!--Botão para login-->
                 </form>
+                <!-- área de status usada pelo login.js -->
+                <p id="message" role="status" aria-live="polite"></p>
                 <br>
                 <p>Não possui uma conta? <a href="cadastrar.html" class="empresa">Cadastre-se aqui</a>.</p> <!--Direcionamento para página de cadastro-->
                 <p>É empresa parceira?<a href="loginEmpresa.html">Acesse aqui</a>.</p> <!--Direcionamento para página de login empresarial-->
