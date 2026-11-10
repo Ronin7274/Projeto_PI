@@ -313,6 +313,12 @@ footer {
     text-decoration: none;
     color: white;
 }
+
+.d-grid {
+    display: flex;
+    gap: 200px
+}
+
 .copy {
     width: 100%;
     color: white;
