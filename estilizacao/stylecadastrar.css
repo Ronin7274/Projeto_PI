@@ -44,7 +44,7 @@ nav ul {
 
 nav li {
     list-style: none;
-    border-bottom: 4px solid transparent;
+    border-bottom: 2px solid transparent;
 }
 
 nav a {
@@ -53,7 +53,7 @@ nav a {
 }
 
 nav a.ativo:hover {
-    border-bottom: 4px solid #0841c9;
+    border-bottom: 2px solid #0841c9;
 }
 
 #entrar {
@@ -84,6 +84,7 @@ main {
 
 #inicio h1 {
     margin-bottom: 20px;
+    font-size: 29px;
     position: relative;
     text-align: center;
 }
@@ -99,12 +100,8 @@ main {
     transform: translateX(-50%);
 }
 
-#inicio p {
-    margin-bottom: 20px;
-}
-
 #inicio {
-    width: 60%;
+    width: 58%;
     margin: auto;
     padding: 20px 30px;
     border-radius: 17px;
@@ -119,7 +116,7 @@ main {
 }
 
 .form {
-    width: 85%;
+    width: 80%;
     margin: auto;
 }
 
@@ -130,15 +127,15 @@ main {
 }
 
 .campo label {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #222;
 }
 
 .campo input,
 .localidade select {
-    height: 65px;
-    padding: 0 20px;
+    height: 52px;
+    padding: 0 15px;
     border: 2px solid #0841C9;
     border-radius: 40px;
     outline: none;
