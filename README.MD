@@ -24,12 +24,6 @@ A proposta do projeto é oferecer um **site de cursos profissionalizantes**, al�
 
 ---
 
-# Funcionalidades e utilização da plataforma
-
-**A ser escrito...**
-
----
-
 ## 💻 Tecnologias utilizadas
 
 O projeto utiliza as seguintes tecnologias:
@@ -37,7 +31,6 @@ O projeto utiliza as seguintes tecnologias:
 * 🌐 **HTML**
 * 🎨 **CSS**
 * 📜 **JavaScript**
-* 🗄️ **MySQL**
 
 ---
 
@@ -50,7 +43,6 @@ O projeto utiliza as seguintes tecnologias:
 * Francisco Alves
 * Gustavo Leniro
 * Luciano Paiva
-* Lucas Felix
 * Gabriel França
 
 ---
@@ -60,3 +52,9 @@ O projeto utiliza as seguintes tecnologias:
 Manual de Identidade Visual da logo do projeto
 
 ![📄download PDF MIV InsertV](./img/doc/MIV_logo_InsertV.pdf)
+
+---
+
+# Design system
+
+![📄download PDF MIV InsertV](./img/doc/DesignSystem.md)

@@ -13,7 +13,7 @@ const app = express();
 const PORT = 3000;
 const scryptAsync = promisify(scrypt);
 
-const DATA_FILE = path.join(__dirname, "banco.json");
+const DATA_FILE = path.join(__dirname, "Banco.json");
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const HASH_REGEX = /^[a-f0-9]{32}:[a-f0-9]{128}$/i; // salt(16 bytes) : chave(64 bytes)
 
@@ -25,7 +25,7 @@ app.use("/img", express.static(path.join(__dirname, "img")));
 // serve as páginas da raiz sem expor o banco.json
 // arquivos da raiz que NUNCA podem ser entregues ao navegador
 const ARQUIVOS_BLOQUEADOS = new Set([
-  "servidor.js", "banco.json", "package.json", "package-lock.json"
+  "servidor.js", "Banco.json", "package.json", "package-lock.json"
 ]);
 
 app.get("/", (req, res, next) => {
