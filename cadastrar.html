@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,7 @@
                 <li><a href="index.html" class="ativo">Início</a></li>
                 <li><a href="login.html"><button id="entrar">Entrar</button></a></li>
             </ul>
-            
+
         </nav>
     </header>
 
@@ -36,80 +37,84 @@
         <section id="inicio"> <!--Seção para preechimento do formulário de cadastro-->
             <h1 class="center">Crie sua conta</h1>
             <div class="form"> <!--Campo em contorno do formulário-->
-            <form id="form_cadastro" class="formulario"> <!--Formulário-->
-            <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
-                <label for="nome">Nome completo:</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo..." required autocomplete="name">
-            </div>
-
-            <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu email..." required autocomplete="email">
-            </div>
-
-            <div class="linha"> <!--Seção para alinhamento de 3 campos na mesma linha-->
-
-                <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
-                    <label for="data">Data de nascimento:</label>
-                    <input type="date" id="data">
-                </div>
-
-                <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
-                    <label for="celular">Celular:</label>
-                    <input type="tel" id="celular" placeholder="Número com DDD...">
-                </div>
-
-                <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
-                    <label for="cidade">Localidade:</label>
-                    <div class="localidade">
-                        <input type="text" id="cidade" placeholder="Cidade">
-
-                        <select id="estado">
-                            <option value="UF">UF</option>
-                            <option value="AC">AC</option>
-                            <option value="AL">AL</option>
-                            <option value="AP">AP</option>
-                            <option value="AM">AM</option>
-                            <option value="BA">BA</option>
-                            <option value="CE">CE</option>
-                            <option value="DF">DF</option>
-                            <option value="ES">ES</option>
-                            <option value="GO">GO</option>
-                            <option value="MA">MA</option>
-                            <option value="MG">MG</option>
-                            <option value="MT">MT</option>
-                            <option value="MS">MS</option>
-                            <option value="PA">PA</option>
-                            <option value="PB">PB</option>
-                            <option value="PR">PR</option>
-                            <option value="PE">PE</option>
-                            <option value="PI">PI</option>
-                            <option value="RJ">RJ</option>
-                            <option value="RN">RN</option>
-                            <option value="RS">RS</option>
-                            <option value="RO">RO</option>
-                            <option value="RR">RR</option>
-                            <option value="SC">SC</option>
-                            <option value="SP">SP</option>
-                            <option value="SE">SE</option>
-                            <option value="TO">TO</option>
-                        </select>
+                <form id="form_cadastro" class="formulario"> <!--Formulário-->
+                    <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
+                        <label for="nome">Nome completo:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo..." required
+                            autocomplete="name">
                     </div>
-                </div>
 
-            </div>
+                    <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu email..." required
+                            autocomplete="email">
+                    </div>
 
-            <div class="senhas">
-            <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
-                <label for="senha">Crie sua senha:</label>
-                <input type="password" id="senha" name="senha" placeholder="Digite sua senha..." required minlength="8" autocomplete="new-password"><br>
-            </div>
+                    <div class="linha"> <!--Seção para alinhamento de 3 campos na mesma linha-->
 
-            <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
-                <label for="confirmar">Confirme sua senha:</label>
-                <input type="password" id="confirmar" name="confirmar" placeholder="Confirme a senha..." required autocomplete="new-password">
-            </div>
-            </div>
+                        <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
+                            <label for="data">Data de nascimento:</label>
+                            <input type="date" id="data">
+                        </div>
+
+                        <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
+                            <label for="celular">Celular:</label>
+                            <input type="tel" id="celular" placeholder="Número com DDD...">
+                        </div>
+
+                        <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
+                            <label for="cidade">Localidade:</label>
+                            <div class="localidade">
+                                <input type="text" id="cidade" placeholder="Cidade">
+
+                                <select id="estado">
+                                    <option value="UF">UF</option>
+                                    <option value="AC">AC</option>
+                                    <option value="AL">AL</option>
+                                    <option value="AP">AP</option>
+                                    <option value="AM">AM</option>
+                                    <option value="BA">BA</option>
+                                    <option value="CE">CE</option>
+                                    <option value="DF">DF</option>
+                                    <option value="ES">ES</option>
+                                    <option value="GO">GO</option>
+                                    <option value="MA">MA</option>
+                                    <option value="MG">MG</option>
+                                    <option value="MT">MT</option>
+                                    <option value="MS">MS</option>
+                                    <option value="PA">PA</option>
+                                    <option value="PB">PB</option>
+                                    <option value="PR">PR</option>
+                                    <option value="PE">PE</option>
+                                    <option value="PI">PI</option>
+                                    <option value="RJ">RJ</option>
+                                    <option value="RN">RN</option>
+                                    <option value="RS">RS</option>
+                                    <option value="RO">RO</option>
+                                    <option value="RR">RR</option>
+                                    <option value="SC">SC</option>
+                                    <option value="SP">SP</option>
+                                    <option value="SE">SE</option>
+                                    <option value="TO">TO</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="senhas">
+                        <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
+                            <label for="senha">Crie sua senha:</label>
+                            <input type="password" id="senha" name="senha" placeholder="Digite sua senha..." required
+                                minlength="8" autocomplete="new-password"><br>
+                        </div>
+
+                        <div class="campo"> <!--Seção individual para modificação do campo de preenchimento-->
+                            <label for="confirmar">Confirme sua senha:</label>
+                            <input type="password" id="confirmar" name="confirmar" placeholder="Confirme a senha..."
+                                required autocomplete="new-password">
+                        </div>
+                    </div>
             </div>
 
             <div class="regras-senha"> <!--Especificações para criação de senha-->
@@ -133,23 +138,23 @@
     <footer> <!-- Rodapé -->
         <ul class="footer-links"> <!--Coluna a esquerda no footer-->
             <div class="rodape-links">
-            <li><a href="#">Política e Termos de uso</a></li>
-            <li><a href="#">Cursos</a></li>
-            <li><a href="#">Vagas</a></li>
+                <li><a href="#">Política e Termos de uso</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Vagas</a></li>
             </div>
         </ul>
         <ul class="footer-links"> <!--Coluna centralizada no footer-->
             <div class="rodape-links">
-            <li><a href="#">InsertV@gmail.com</a></li>
-            <li><a href="#">(11) 98877 9625</a></li>
-            <li><a href="#">@InsertV</a></li>
+                <li><a href="#">InsertV@gmail.com</a></li>
+                <li><a href="#">(11) 98877 9625</a></li>
+                <li><a href="#">@InsertV</a></li>
             </div>
         </ul>
         <ul class="footer-links"> <!--Coluna a direita no footer-->
             <div class="rodape-links">
-            <li><a href="#">Rua InsertV, 88</a></li>
-            <li><a href="#">Diadema - SP</a></li>
-            <li><a href="#">Voltar ao inicio</a></li>
+                <li><a href="#">Rua InsertV, 88</a></li>
+                <li><a href="#">Diadema - SP</a></li>
+                <li><a href="#">Voltar ao inicio</a></li>
             </div>
         </ul>
 
@@ -158,4 +163,5 @@
         </div>
     </footer>
 </body>
+
 </html>
