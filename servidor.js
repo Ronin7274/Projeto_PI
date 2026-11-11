@@ -137,16 +137,18 @@ async function verificaSenha(senha, armazenada) {
 
 const sessoes = new Map(); // token -> id_candidato
 
-function criarSessao(idCandidato) {
+function criarSessaoGeral(tipo, id) {
   const token = randomBytes(32).toString("hex");
-  sessoes.set(token, idCandidato);
+  sessoes.set(token, { tipo, id });
   return token;
 }
 
+function criarSessao(idCandidato) {
+   return criarSessaoGeral("candidato", idCandidato);
+}
+
 function criarSessaoEmpresa(idEmpresa) {
-  const token = randomBytes(32).toString("hex");
-  sessoes.set(token, idEmpresa);
-  return token;
+  return criarSessaoGeral("empresa", idEmpresa);
 }
 
 // O cliente manda "Authorization: Bearer <token>". O servidor descobre
@@ -156,8 +158,10 @@ function requireUser(req, res, next) {
 
   try {
     const match = /^Bearer (.+)$/.exec(req.headers.authorization || "");
-    const id = match && sessoes.get(match[1]);
-    if (id) usuario = { id_candidato: id, token: match[1] };
+    const sessao = match && sessoes.get(match[1]);
+    if (sessao?.tipo === "candidato") {
+      usuario = { id_candidato: sessao.id, token: match[1] };
+    }
   } catch (error) {
     console.error("Erro ao verificar sessão:", error);
     return res.status(500).json({ error: "não foi possível verificar sua sessão." });
@@ -176,8 +180,10 @@ function requireUserEmpresa(req, res, next) {
 
   try {
     const match = /^Bearer (.+)$/.exec(req.headers.authorization || "");
-    const id = match && sessoes.get(match[1]);
-    if (id) empresa = { id_empresa: id, token: match[1] };
+    const sessao = match && sessoes.get(match[1]);
+    if (sessao?.tipo === "empresa") {
+      empresa = { id_empresa: sessao.id, token: match[1] };
+    }
   } catch (error) {
     console.error("Erro ao verificar sessão:", error);
     return res.status(500).json({ error: "não foi possível verificar sua sessão." });
@@ -352,7 +358,7 @@ app.post("/api/signup/empresa", async (req, res) => {
 
     return res.status(201).json({
       message: "conta criada com sucesso.",
-      token: criarSessao(novoUsuario.id_empresa),
+      token: criarSessaoEmpresa(novoUsuario.id_empresa),
       empresa: empresaPublica(novoUsuario)
     });
   } catch (error) {
@@ -473,7 +479,7 @@ app.post("/api/login/empresa", async (req, res) => {
 
     return res.json({
       message: "Login bem sucedido.",
-      token: criarSessao(user.id_empresa),
+      token: criarSessaoEmpresa(user.id_empresa),
       empresa: empresaPublica(user)
     });
   } catch (error) {
@@ -487,7 +493,7 @@ app.post("/api/login/empresa", async (req, res) => {
 
 app.post("/api/logout/empresa", requireUserEmpresa, (req, res) => {
   try {
-    sessoes.delete(req.user.token);
+    sessoes.delete(req.empresa.token);
     res.json({ message: "Sessão encerrada." });
   } catch (error) {
     responderErro(res, error, "Não foi possível encerrar a sessão.");
@@ -586,7 +592,7 @@ function somenteODono(req, res, next) {
   let permitido = false;
 
   try {
-    permitido = req.params.id === req.user.id_empresa;
+    permitido = req.params.id === req.empresa.id_empresa;
   } catch (error) {
     console.error("Erro ao verificar permissão:", error);
     return res.status(500).json({ error: "não foi possível verificar a permissão." });
@@ -602,7 +608,7 @@ function somenteODono(req, res, next) {
 app.get("/api/users/:id", requireUserEmpresa, somenteODono, async (req, res) => {
   try {
     const data = await lerBanco();
-    const user = data.empresa.find(u => u.id_empresa === req.user.id_empresa);
+    const user = data.empresa.find(u => u.id_empresa === req.empresa.id_empresa);
 
     if (!user) throw erroHttp(404, "empresa não encontrada.");
 
@@ -623,7 +629,7 @@ app.put("/api/users/:id", requireUserEmpresa, somenteODono, async (req, res) => 
 
     const atualizado = await naFila(async () => {
       const data = await lerBanco();
-      const user = data.empresa.find(u => u.id_empresa === req.user.id_empresa);
+      const user = data.empresa.find(u => u.id_empresa === req.empresa.id_empresa);
 
       if (!user) throw erroHttp(404, "empresa não encontrada.");
 
@@ -643,7 +649,7 @@ app.delete("/api/users/:id", requireUserEmpresa, somenteODono, async (req, res) 
   try {
     await naFila(async () => {
       const data = await lerBanco();
-      const restantes = data.empresa.filter(u => u.id_empresa !== req.user.id_empresa);
+      const restantes = data.empresa.filter(u => u.id_empresa !== req.empresa.id_empresa);
 
       if (restantes.length === data.empresa.length) {
         throw erroHttp(404, "empresa não encontrada.");
@@ -653,7 +659,7 @@ app.delete("/api/users/:id", requireUserEmpresa, somenteODono, async (req, res) 
       await salvarBanco(data);
     });
 
-    sessoes.delete(req.user.token);
+    sessoes.delete(req.empresa.token);
     res.json({ message: "Conta excluída." });
   } catch (error) {
     responderErro(res, error, "Não foi possível excluir a conta.");

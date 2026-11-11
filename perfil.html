@@ -7,6 +7,7 @@
     <link rel="icon" href="img/InsertVLogopng.png">
     <link rel="stylesheet" href="estilizacao/styleperfil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!--Font awesome é uma biblioteca de icones e ferramentas para adicionar icones vetorias na página sem precisar abaixar o arquivo SVG-->
+    <script src="logout.js" defer></script>
 </head>
 <body>
    <header> <!--Cabeçalho da página-->
@@ -21,8 +22,12 @@
             <div class="icone">
                 <i class="fa-regular fa-user"></i> <!--Icone de perfil-->
             </div></a>
+            <button type="button" class="logout-button" data-logout
+                data-token-key="tokenCandidato" data-profile-key="candidato"
+                data-endpoint="/api/logout" data-redirect="login.html">Sair</button>
         </nav>
     </header>
+    <p id="logout-message" class="logout-message" role="status" aria-live="polite"></p>
     <main class="container"> <!--Conteúdo principal-->
         <section class="profile"> <!-- Informações do perfil -->
             <div class="profile-photo">

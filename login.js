@@ -58,7 +58,7 @@ function iniciarLogin() {
       const storage = pegar("lembrar").checked ? localStorage : sessionStorage;
 
       try {
-        storage.setItem("token", data.token);
+        storage.setItem("tokenCandidato", data.token);
         storage.setItem("candidato", JSON.stringify(data.candidato));
       } catch (erroStorage) {
         console.warn("Não foi possível guardar a sessão:", erroStorage);

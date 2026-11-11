@@ -56,6 +56,26 @@ header nav a {
     box-shadow: 0 0 10px #0077bd;
 }
 
+.logout-button {
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 7px;
+    background: #0841c9;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logout-button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+.logout-message {
+    color: #b00020;
+    text-align: center;
+}
+
 /* Área principal */
 main {
     flex: 1;
