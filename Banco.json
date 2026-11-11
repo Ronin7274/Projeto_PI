@@ -18,7 +18,7 @@
       "id_candidato": "1",
       "nome": "carlos",
       "email": "carlos@gmail.com",
-      "senha": "carlos123",
+      "senha": "60af96c8e66294b21633978f7c3e7e94:13e28a6f17f740a3868379546f41c3b553aa61fd49325e963d54fa0b8d839d354fc6405f579b8687aaa71545d546e7eaacce1347a330c4f25f794e1131db6956",
       "tipo_usuario": "cliente"
     },
     {
@@ -43,6 +43,18 @@
       "email": "carlos_empresa@gmail.com",
       "senha": "carlosEmpresa123",
       "cnpj": "01.143.186/0001-09",
+      "cidade": "Diadema",
+      "UF": "SP",
+      "tipo_usuario": "empresa"
+    },
+    {
+      "id_empresa": "a71429d8-b5fe-4707-bfe4-0d71572128b3",
+      "nome": "pedro",
+      "email": "pedro@gmail.com",
+      "senha": "ed57ba0357c3c061a669590aabd255ab:e375928cfd085b7e2e3741eaed8e7b6e6b8bfc4032210254f27a01ed802d8eaec622a5764af254766f7c5f8a86c8444ea15fb268f6bd32bc7a42be345bcb142c",
+      "cnpj": "50351886000196",
+      "cidade": "diadema",
+      "UF": "SP",
       "tipo_usuario": "empresa"
     }
   ],

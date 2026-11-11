@@ -13,9 +13,10 @@ const app = express();
 const PORT = 3000;
 const scryptAsync = promisify(scrypt);
 
-const DATA_FILE = path.join(__dirname, "banco.json");
+const DATA_FILE = path.join(__dirname, "Banco.json");
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const HASH_REGEX = /^[a-f0-9]{32}:[a-f0-9]{128}$/i; // salt(16 bytes) : chave(64 bytes)
+const CNPJ_REGEX = /^\d{14}$/;
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
@@ -25,7 +26,7 @@ app.use("/img", express.static(path.join(__dirname, "img")));
 // serve as páginas da raiz sem expor o banco.json
 // arquivos da raiz que NUNCA podem ser entregues ao navegador
 const ARQUIVOS_BLOQUEADOS = new Set([
-  "servidor.js", "banco.json", "package.json", "package-lock.json"
+  "servidor.js", "Banco.json", "package.json", "package-lock.json"
 ]);
 
 app.get("/", (req, res, next) => {
@@ -84,6 +85,9 @@ async function lerBanco() {
   if (!data || !Array.isArray(data.candidato)) {
     throw new Error("estrutura inválida em banco.json (falta a tabela candidato).");
   }
+  if (!Array.isArray(data.empresa)) {
+    throw new Error("estrutura inválida em banco.json (falta a tabela empresa).");
+  }
   return data;
 }
 
@@ -139,6 +143,12 @@ function criarSessao(idCandidato) {
   return token;
 }
 
+function criarSessaoEmpresa(idEmpresa) {
+  const token = randomBytes(32).toString("hex");
+  sessoes.set(token, idEmpresa);
+  return token;
+}
+
 // O cliente manda "Authorization: Bearer <token>". O servidor descobre
 // QUEM é o usuário pelo token; o cliente nunca escolhe o próprio id.
 function requireUser(req, res, next) {
@@ -158,6 +168,26 @@ function requireUser(req, res, next) {
   }
 
   req.user = usuario;
+  next(); // fora do try: erros das rotas seguintes não são tratados aqui
+}
+
+function requireUserEmpresa(req, res, next) {
+  let empresa = null;
+
+  try {
+    const match = /^Bearer (.+)$/.exec(req.headers.authorization || "");
+    const id = match && sessoes.get(match[1]);
+    if (id) empresa = { id_empresa: id, token: match[1] };
+  } catch (error) {
+    console.error("Erro ao verificar sessão:", error);
+    return res.status(500).json({ error: "não foi possível verificar sua sessão." });
+  }
+
+  if (!empresa) {
+    return res.status(401).json({ error: "não autenticado." });
+  }
+
+  req.empresa = empresa;
   next(); // fora do try: erros das rotas seguintes não são tratados aqui
 }
 
@@ -185,6 +215,17 @@ function usuarioPublico(user) {
     id_candidato: user.id_candidato,
     nome: user.nome,
     email: user.email
+  };
+}
+
+function empresaPublica(empresa) {
+  return {
+    id_empresa: empresa.id_empresa,
+    nome: empresa.nome,
+    email: empresa.email,
+    cnpj: empresa.cnpj,
+    cidade: empresa.cidade,
+    UF: empresa.UF
   };
 }
 
@@ -252,6 +293,78 @@ app.post("/api/signup", async (req, res) => {
 });
 
 /* ------------------------------------------------------------------ */
+/* CREATE: cadastro empresa                                           */
+/* ------------------------------------------------------------------ */
+
+app.post("/api/signup/empresa", async (req, res) => {
+  try {
+    const { nome, email, senha, cnpj, cidade, UF } = req.body || {};
+
+    if (
+      typeof nome !== "string" ||
+      typeof email !== "string" ||
+      typeof senha !== "string" ||
+      typeof cnpj !== "string" ||
+      typeof cidade !== "string" ||
+      typeof UF !== "string" ||
+      !nome.trim() ||
+      !EMAIL_REGEX.test(email.trim()) ||
+      !CNPJ_REGEX.test(cnpj.trim()) ||
+      !cidade.trim() ||
+      !UF.trim() ||
+      senha.length < 8 ||
+      Buffer.byteLength(senha, "utf8") > 1024
+    ) {
+      throw erroHttp(
+        400,
+        "coloque um nome, email e senha válidos. A senha deve ter pelo menos 8 caracteres."
+      );
+    }
+
+    const emailNormalizado = email.trim().toLowerCase();
+    const senhaHash = await encriptarSenha(senha); // feito antes da fila (é lento)
+
+    const novoUsuario = await naFila(async () => {
+      const data = await lerBanco();
+
+      const existe = data.empresa.some(
+        u => typeof u.email === "string" && u.email.toLowerCase() === emailNormalizado
+      );
+      if (existe) {
+        throw erroHttp(409, "uma conta com esse email já existe.");
+      }
+
+      const novo = {
+        id_empresa: randomUUID(),
+        nome: nome.trim(),
+        email: emailNormalizado,
+        senha: senhaHash,
+        cnpj: cnpj.trim(),
+        cidade: cidade.trim(),
+        UF: UF.trim(),
+        tipo_usuario: "empresa",
+      };
+
+      data.empresa.push(novo);
+      await salvarBanco(data);
+      return novo;
+    });
+
+    return res.status(201).json({
+      message: "conta criada com sucesso.",
+      token: criarSessao(novoUsuario.id_empresa),
+      empresa: empresaPublica(novoUsuario)
+    });
+  } catch (error) {
+    return responderErro(
+      res,
+      error,
+      "Não foi possível criar sua conta. Por favor, tente novamente."
+    );
+  }
+});
+
+/* ------------------------------------------------------------------ */
 /* Login / Logout                                                      */
 /* ------------------------------------------------------------------ */
 
@@ -307,6 +420,72 @@ app.post("/api/login", async (req, res) => {
 });
 
 app.post("/api/logout", requireUser, (req, res) => {
+  try {
+    sessoes.delete(req.user.token);
+    res.json({ message: "Sessão encerrada." });
+  } catch (error) {
+    responderErro(res, error, "Não foi possível encerrar a sessão.");
+  }
+});
+
+
+/*------------------------------------------------------------------------------*/
+/* Login / Logout para empresas                                                */
+/*------------------------------------------------------------------------------*/
+
+
+app.post("/api/login/empresa", async (req, res) => {
+  try {
+    const { email, senha } = req.body || {};
+
+    if (
+      typeof email !== "string" ||
+      typeof senha !== "string" ||
+      !email.trim() ||
+      !senha
+    ) {
+      throw erroHttp(400, "email e senha são obrigatórios.");
+    }
+
+    const emailNormalizado = email.trim().toLowerCase();
+    const data = await lerBanco();
+
+    const user = data.empresa.find(
+      u => typeof u.email === "string" && u.email.toLowerCase() === emailNormalizado
+    );
+
+    if (!user || !(await verificaSenha(senha, user.senha))) {
+      throw erroHttp(401, "email ou senha inválidos.");
+    }
+
+    // migra senha em texto puro para hash depois de autenticar
+    if (!HASH_REGEX.test(user.senha)) {
+      const novoHash = await encriptarSenha(senha);
+      await naFila(async () => {
+        const atual = await lerBanco();
+        const alvo = atual.empresa.find(u => u.id_empresa === user.id_empresa);
+        if (alvo) {
+          alvo.senha = novoHash;
+          await salvarBanco(atual);
+        }
+      });
+    }
+
+    return res.json({
+      message: "Login bem sucedido.",
+      token: criarSessao(user.id_empresa),
+      empresa: empresaPublica(user)
+    });
+  } catch (error) {
+    return responderErro(
+      res,
+      error,
+      "Não foi possível fazer o login. Por favor, tente novamente."
+    );
+  }
+});
+
+app.post("/api/logout/empresa", requireUserEmpresa, (req, res) => {
   try {
     sessoes.delete(req.user.token);
     res.json({ message: "Sessão encerrada." });
@@ -388,6 +567,89 @@ app.delete("/api/users/:id", requireUser, somenteODono, async (req, res) => {
       }
 
       data.candidato = restantes;
+      await salvarBanco(data);
+    });
+
+    sessoes.delete(req.user.token);
+    res.json({ message: "Conta excluída." });
+  } catch (error) {
+    responderErro(res, error, "Não foi possível excluir a conta.");
+  }
+});
+
+/* ------------------------------------------------------------------ */
+/* READ / UPDATE / DELETE da empresa logada                            */
+/* ------------------------------------------------------------------ */
+
+// só o próprio usuário acessa o próprio registro
+function somenteODono(req, res, next) {
+  let permitido = false;
+
+  try {
+    permitido = req.params.id === req.user.id_empresa;
+  } catch (error) {
+    console.error("Erro ao verificar permissão:", error);
+    return res.status(500).json({ error: "não foi possível verificar a permissão." });
+  }
+
+  if (!permitido) {
+    return res.status(403).json({ error: "acesso negado." });
+  }
+  next();
+}
+
+// READ
+app.get("/api/users/:id", requireUserEmpresa, somenteODono, async (req, res) => {
+  try {
+    const data = await lerBanco();
+    const user = data.empresa.find(u => u.id_empresa === req.user.id_empresa);
+
+    if (!user) throw erroHttp(404, "empresa não encontrada.");
+
+    res.json({ empresa: usuarioPublico(user) });
+  } catch (error) {
+    responderErro(res, error, "Não foi possível buscar a empresa.");
+  }
+});
+
+// UPDATE (nome)
+app.put("/api/users/:id", requireUserEmpresa, somenteODono, async (req, res) => {
+  try {
+    const { nome } = req.body || {};
+
+    if (typeof nome !== "string" || !nome.trim()) {
+      throw erroHttp(400, "informe um nome válido.");
+    }
+
+    const atualizado = await naFila(async () => {
+      const data = await lerBanco();
+      const user = data.empresa.find(u => u.id_empresa === req.user.id_empresa);
+
+      if (!user) throw erroHttp(404, "empresa não encontrada.");
+
+      user.nome = nome.trim();
+      await salvarBanco(data);
+      return user;
+    });
+
+    res.json({ message: "Perfil atualizado.", empresa: usuarioPublico(atualizado) });
+  } catch (error) {
+    responderErro(res, error, "Não foi possível atualizar a empresa.");
+  }
+});
+
+// DELETE
+app.delete("/api/users/:id", requireUserEmpresa, somenteODono, async (req, res) => {
+  try {
+    await naFila(async () => {
+      const data = await lerBanco();
+      const restantes = data.empresa.filter(u => u.id_empresa !== req.user.id_empresa);
+
+      if (restantes.length === data.empresa.length) {
+        throw erroHttp(404, "empresa não encontrada.");
+      }
+
+      data.empresa = restantes;
       await salvarBanco(data);
     });
 

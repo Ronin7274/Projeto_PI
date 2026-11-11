@@ -74,7 +74,7 @@ function iniciarCadastro() {
       signupForm.reset();
 
       // destino que o formulário antigo usava em action="painelcursos.html"
-      setTimeout(() => { window.location.href = "painelcursos.html"; }, 1000);
+      setTimeout(() => { window.location.href = "login.html"; }, 1000);
     } catch (error) {
       console.error("cadastro pelo frontend falhou:", error);
       // TypeError = o fetch nem chegou ao servidor (servidor desligado, rede caída)
