@@ -27,8 +27,8 @@ nav {
 }
 
 nav img {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 70px;
     object-fit: contain;
 }
 
@@ -177,70 +177,75 @@ footer {
     text-align: center;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
-     nav {
+
+    /* ---------- CABEÇALHO ---------- */
+    nav {
         height: auto;
-        padding: 15px 20px;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
+        min-height: 80px;
+        padding: 10px 20px;
+        margin-bottom: 30px;
     }
 
     nav img {
-        width: 350px;
-        height: 100px;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: auto;        
+        width: 60px;
+        height: 60px;
     }
 
+    /* o menu deixa de ficar posicionado em 85% e volta para o fluxo normal */
     nav ul {
         position: static;
         transform: none;
-        justify-content: center;
-        gap: 40px;
+        gap: 20px;
     }
 
+    /* ---------- CONTEÚDO ---------- */
     #inicio {
         flex-direction: column;
         align-items: center;
-        max-width: 100%;
-        min-height: auto;
     }
 
-    #inicio .imagem-login {
+    /* imagem sai do position: relative com top/left negativos e fica acima do formulário */
+    .imagem-login {
         position: static;
-        width: 80%;
+        width: 100%;
+        max-width: 280px;
         height: auto;
-        margin-bottom: 15px;
+        margin: 0 auto 20px;
     }
 
+    .texto {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    main h1,
     #inicio h1 {
-        line-height: 35px;
-    }
-
-    #inicio p {
-        line-height: 23px;
+        font-size: 26px;
+        line-height: 34px;
     }
 
     #inicio form {
-        width: 90%;
-    }
-
-    footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 0;
-    }
-
-    .footer-links {
-        padding: 25px 10px;
         width: 100%;
     }
 
-    .copy {
-        font-size: 12px;
+    .form-label,
+    .form-button {
+        width: 100%;
+    }
+
+    /* ---------- RODAPÉ ---------- */
+    .d-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        text-align: center;
+    }
+
+    .footer-links {
+        padding: 25px 20px 0;
     }
 }
