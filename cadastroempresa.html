@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar - Empresa</title>
     <link rel="icon" href="img/InsertVLogopng.png">
     <link rel="stylesheet" href="estilizacao/stylecadastroEmpr.css">
+        <script src="cadastroempresa.js" defer></script>
+
 </head>
 
 <body>
     <main class="cadastro-container"> <!--Conteúdo da página-->
 
         <!-- Lado esquerdo: formulário -->
-        <section id="principal"> 
+        <section id="principal">
 
             <img src="img/imgInsertVlogo.svg" alt="Logo marca do InsertV" class="logo">
             <h2>Cadastro</h2>
@@ -20,7 +23,7 @@
 
             <p class="titulo-secao">Dados empresariais</p>
 
-            <form action="loginEmpresa.html" method="get" class="formulario"> <!--Formulário-->
+            <form id="form_cadastroEmpresa" class="formulario"> <!--Formulário-->
 
                 <div class="campo"> <!--Campo individual do formulário-->
                     <label for="nome">Nome <span>*</span></label>
@@ -29,17 +32,22 @@
 
                 <div class="campo"> <!--Campo individual do formulário-->
                     <label for="cnpj">CNPJ <span>*</span></label>
-                    <input type="text" id="cnpj" placeholder="Informe os números do CNPJ">
+                    <input type="text" id="cnpj" placeholder="Informe os 14 números do CNPJ" required>
                 </div>
 
                 <div class="campo"> <!--Campo individual do formulário-->
                     <label for="email">E-mail <span>*</span></label>
-                    <input type="email" id="email" placeholder="Informe o e-mail corporativo">
+                    <input type="email" id="email" placeholder="Informe o e-mail corporativo" required>
                 </div>
 
                 <div class="campo"> <!--Campo individual do formulário-->
                     <label for="senha">Senha <span>*</span></label>
-                    <input type="password" id="senha" placeholder="Crie sua senha">
+                    <input type="password" id="senha" placeholder="Crie sua senha" minlength="8" required>
+                </div>
+
+                <div class="campo"> <!--Campo individual do formulário-->
+                    <label for="confirmar">Confirme sua senha <span>*</span></label>
+                    <input type="password" id="confirmar" placeholder="Confirme sua senha" required>
                 </div>
 
                 <div class="campo"> <!--Campo individual do formulário-->
@@ -88,7 +96,9 @@
                 </div>
                 <input type="submit" value="Criar minha conta →" class="form-button"> <!--Botão para criação da conta-->
             </form>
-            
+            <!-- área de status usada pelo cadastrar.js -->
+            <p id="message" role="status" aria-live="polite"></p>
+
             <div class="fim"> <!--Links para navegar as páginas anteriores do site-->
                 <a href="index.html">Página inicial</a>
                 <a href="#">Termos e direitos</a>
@@ -104,7 +114,8 @@
             <img src="img/img_cadastro_empresa.png" alt="Ilustração de gestão empresarial">
         </aside>
 
-      
+
     </main>
 </body>
+
 </html>
