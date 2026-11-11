@@ -26,9 +26,9 @@ header nav {
     transform: translateX(-50%);
 }
 
-header img {
-    width: 210px;
-    height: 220px;
+nav img {
+    width: 200px;
+    height: 70px;
     object-fit: contain;
 }
 

@@ -25,9 +25,9 @@ nav {
     border-bottom: 1px solid #ccc;
 }
 
-img {
-    width: 220px;
-    height: 220px;
+nav img {
+    width: 200px;
+    height: 70px;
     object-fit: contain;
 }
 

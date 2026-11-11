@@ -25,9 +25,9 @@ nav {
     border-bottom: 1px solid #ccc;
 }
 
-img {
-    width: 220px;
-    height: 220px;
+nav img {
+    width: 200px;
+    height: 70px;
     object-fit: contain;
 }
 
@@ -319,66 +319,69 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
+
+    /* ---------- CABEÇALHO ---------- */
     nav {
         height: auto;
         padding: 15px 20px;
         flex-wrap: wrap;
-        gap: 10px;
+        row-gap: 10px;
     }
 
     nav img {
-        width: 350px;
-        height: 100px;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: auto;        
+        width: 60px;
+        height: 60px;
     }
 
+    /* menu deixa de ficar centralizado por cima e vai para a linha de baixo */
     nav ul {
         position: static;
         transform: none;
+        order: 3;
+        width: 100%;
         justify-content: center;
-        gap: 20px;
+        gap: 25px;
+        padding-top: 5px;
+    }
+
+    #nav {
+        order: 3;
+        width: 100%;
     }
 
     .s {
-        gap: 15px;
+        gap: 8px;
     }
 
-    #entrar,
-    #botao-azul {
-        padding: 8px 62px;
-        font-size: 13px;
-    }
-
+    /* ---------- INÍCIO ---------- */
     main {
+        min-height: auto;
+    }
+
+    #inicio {
+        margin: 0;
+        margin-bottom: 0;
         padding: 30px 20px;
+        min-height: auto;
+        text-align: center;
     }
 
     main h1 {
         font-size: 28px;
-        line-height: 35px;
-    }
-
-    #inicio {
-        margin: 0 20px;
-        min-height: auto;
+        line-height: 36px;
     }
 
     #inicio img {
         position: static;
-        width: 100%;
-        height: auto;
-        max-width: 500px;
         display: block;
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        padding: 0;
         margin: 30px auto 0;
     }
 
-    main button {
-        padding: 8px 25px;
-        margin-bottom: 10px;
-    }
-
+    /* ---------- COMO FUNCIONA ---------- */
     #funcionalidades {
         padding: 40px 20px;
     }
@@ -396,22 +399,56 @@ footer {
     .passo {
         width: 100%;
         max-width: 450px;
-        padding: 25px 20px;
     }
 
-    footer {
+    /* ---------- SOBRE ---------- */
+    #sobre {
+        margin-top: 60px;
+    }
+
+    #sobre-tbm {
+        height: auto;
+    }
+
+    .sobre-inicio {
+        flex-direction: column;
+        gap: 25px;
+        padding: 40px 25px;
+        text-align: center;
+    }
+
+    .sobre-inicio img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* tira as quebras de linha manuais (<br>) para o texto se ajustar à tela */
+    .sobre-inicio br,
+    .valores-container br {
+        display: none;
+    }
+
+    /* ---------- VALORES ---------- */
+    .valores {
+        padding: 40px 20px;
+        margin-top: 0;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .valores-container {
+        width: calc(50% - 15px);
+    }
+
+    /* ---------- RODAPÉ ---------- */
+    .d-grid {
         flex-direction: column;
         align-items: center;
-        text-align: center;
         gap: 0;
+        text-align: center;
     }
 
     .footer-links {
-        padding: 25px 10px;
-        width: 100%;
-    }
-
-    .copy {
-        font-size: 12px;
+        padding: 25px 20px 0;
     }
 }
