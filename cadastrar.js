@@ -64,7 +64,7 @@ function iniciarCadastro() {
 
       // a conta já foi criada; falha ao guardar a sessão não deve parecer falha de cadastro
       try {
-        sessionStorage.setItem("token", data.token);
+        sessionStorage.setItem("tokenCandidato", data.token);
         sessionStorage.setItem("candidato", JSON.stringify(data.candidato));
       } catch (erroStorage) {
         console.warn("Não foi possível guardar a sessão:", erroStorage);

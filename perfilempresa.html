@@ -7,6 +7,7 @@
     <title>Perfil - Empresa</title>
     <link rel="icon" href="img/InsertVLogopng.png">
     <link rel="stylesheet" href="estilizacao/styleperfilempr.css">
+    <script src="logout.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!--Font awesome é uma biblioteca de icones e ferramentas para adicionar icones vetorias na página sem precisar abaixar o arquivo SVG-->
 </head>
 <body>
@@ -16,12 +17,20 @@
             <a href="#">Painel</a>
         </nav>
 
-        <a href="index.html">
-            <div class="icone">
+        <div class="profile-menu">
+            <button type="button" class="icone profile-menu-toggle"
+                aria-label="Abrir menu do perfil" aria-expanded="false"
+                aria-controls="logout-menu">
                 <i class="fa-regular fa-user"></i>
+            </button>
+            <div class="profile-menu-dropdown" id="logout-menu" hidden>
+                <button type="button" class="logout-button" data-logout
+                    data-token-key="tokenEmpresa" data-profile-key="empresa"
+                    data-endpoint="/api/logout/empresa" data-redirect="loginEmpresa.html">Sair</button>
             </div>
-        </a>
+        </div>
     </header>
+    <p id="logout-message" class="logout-message" role="status" aria-live="polite"></p>
 
     <main>
         <div class="dashboard">

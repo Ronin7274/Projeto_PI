@@ -55,10 +55,10 @@ function iniciarLogin() {
 
       // "Lembrar-me" marcado: token salvo mesmo fechando o navegador.
       // Desmarcado: vale só enquanto a aba estiver aberta.
-      //const storage = pegar("lembrar").checked ? localStorage : sessionStorage;
+      const storage = pegar("lembrarEmpresa").checked ? localStorage : sessionStorage;
 
       try {
-        storage.setItem("token", data.token);
+        storage.setItem("tokenEmpresa", data.token);
         storage.setItem("empresa", JSON.stringify(data.empresa));
       } catch (erroStorage) {
         console.warn("Não foi possível guardar a sessão:", erroStorage);
@@ -67,7 +67,7 @@ function iniciarLogin() {
       message.textContent = `Bem-vindo, ${data.empresa.nome}!`;
 
       // destino que o formulário antigo usava em action="painelvagas.html"
-      setTimeout(() => { window.location.href = "painelvagas.html"; }, 800);
+      setTimeout(() => { window.location.href = "visaoempresa.html"; }, 800);
     } catch (error) {
       console.error("login pelo frontend falhou:", error);
       message.textContent =
