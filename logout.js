@@ -1,4 +1,29 @@
 const logoutButton = document.querySelector("[data-logout]");
+const profileMenuToggle = document.querySelector(".profile-menu-toggle");
+const profileMenuDropdown = document.querySelector(".profile-menu-dropdown");
+
+if (profileMenuToggle && profileMenuDropdown) {
+  profileMenuToggle.addEventListener("click", () => {
+    const isExpanded = profileMenuToggle.getAttribute("aria-expanded") === "true";
+    profileMenuToggle.setAttribute("aria-expanded", String(!isExpanded));
+    profileMenuDropdown.hidden = isExpanded;
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".profile-menu")) {
+      profileMenuToggle.setAttribute("aria-expanded", "false");
+      profileMenuDropdown.hidden = true;
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      profileMenuToggle.setAttribute("aria-expanded", "false");
+      profileMenuDropdown.hidden = true;
+      profileMenuToggle.focus();
+    }
+  });
+}
 
 if (logoutButton) {
   const message = document.getElementById("logout-message");

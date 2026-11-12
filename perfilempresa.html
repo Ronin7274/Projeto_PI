@@ -17,14 +17,18 @@
             <a href="#">Painel</a>
         </nav>
 
-        <a href="index.html">
-            <div class="icone">
+        <div class="profile-menu">
+            <button type="button" class="icone profile-menu-toggle"
+                aria-label="Abrir menu do perfil" aria-expanded="false"
+                aria-controls="logout-menu">
                 <i class="fa-regular fa-user"></i>
+            </button>
+            <div class="profile-menu-dropdown" id="logout-menu" hidden>
+                <button type="button" class="logout-button" data-logout
+                    data-token-key="tokenEmpresa" data-profile-key="empresa"
+                    data-endpoint="/api/logout/empresa" data-redirect="loginEmpresa.html">Sair</button>
             </div>
-        </a>
-        <button type="button" class="logout-button" data-logout
-            data-token-key="tokenEmpresa" data-profile-key="empresa"
-            data-endpoint="/api/logout/empresa" data-redirect="loginEmpresa.html">Sair</button>
+        </div>
     </header>
     <p id="logout-message" class="logout-message" role="status" aria-live="polite"></p>
 

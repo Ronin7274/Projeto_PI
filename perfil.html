@@ -18,13 +18,18 @@
                 <li><a href="painelcursos.html">Cursos</a></li>
                 <li><a href="perfil.html" class="ativo">Meu perfil</a></li>
             </ul>
-            <a href="index.html">
-            <div class="icone">
-                <i class="fa-regular fa-user"></i> <!--Icone de perfil-->
-            </div></a>
-            <button type="button" class="logout-button" data-logout
-                data-token-key="tokenCandidato" data-profile-key="candidato"
-                data-endpoint="/api/logout" data-redirect="login.html">Sair</button>
+            <div class="profile-menu">
+                <button type="button" class="icone profile-menu-toggle"
+                    aria-label="Abrir menu do perfil" aria-expanded="false"
+                    aria-controls="logout-menu">
+                    <i class="fa-regular fa-user"></i>
+                </button>
+                <div class="profile-menu-dropdown" id="logout-menu" hidden>
+                    <button type="button" class="logout-button" data-logout
+                        data-token-key="tokenCandidato" data-profile-key="candidato"
+                        data-endpoint="/api/logout" data-redirect="login.html">Sair</button>
+                </div>
+            </div>
         </nav>
     </header>
     <p id="logout-message" class="logout-message" role="status" aria-live="polite"></p>
