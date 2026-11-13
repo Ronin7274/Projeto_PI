@@ -1,3 +1,4 @@
+1° Apresentação:
 # 🚀 InsertV
 
 > **Projeto Integrador**
@@ -6,7 +7,7 @@ O **InsertV** é uma plataforma desenvolvida com o objetivo de **abrir portas pa
 
 A proposta do projeto é oferecer um **site de cursos profissionalizantes**, além de uma plataforma para conectar **empresas e pessoas em busca de oportunidades de emprego**.
 
-![Logo InsertV](./img/InsertVlogo.svg)
+![Logo InsertV](./img/InsertVlogocopia.svg)
 
 ---
 
@@ -31,6 +32,7 @@ O projeto utiliza as seguintes tecnologias:
 * 🌐 **HTML**
 * 🎨 **CSS**
 * 📜 **JavaScript**
+* 💻 **Node.js**
 
 ---
 
@@ -38,23 +40,43 @@ O projeto utiliza as seguintes tecnologias:
 
 **Projeto Integrador — InsertV**
 
-* Raquel Feitosa
-* Gabriel Valerio
 * Francisco Alves
+* Gabriel Valerio
+* Gabriel França
 * Gustavo Leniro
 * Luciano Paiva
-* Gabriel França
+* Maria Raquel
 
 ---
+# 🎞️ Página inicial InsertV
+<img src="img\PagInicialprint.png" widht="150px">
 
-# MIV logo
+<br><br>
+# 🖥️ Clique e veja nosso site funcionando:
+<a href="https://ronin7274.github.io/Projeto_PI/" target="_blank">🔗 Link site InsertV </a>
+<br><br>
+# 💙 MIV logo
 
 Manual de Identidade Visual da logo do projeto
 
-![📄download PDF MIV InsertV](./img/doc/MIV_logo_InsertV.pdf)
+[📄Download PDF MIV InsertV](img\doc\MIVInsertV.pdf)
 
 ---
+<br><br>
+# 🎨 Design system
 
-# Design system
+[📄Visualize o Design System do InsertV](./img/doc/DesignSystem.md)
+---
+<br><br>
+# 🗃️ Documentação InsertV
 
-![📄download PDF MIV InsertV](./img/doc/DesignSystem.md)
+[📄Veja a nossa documentação](img\doc\DocumentaçãoInsertV.pdf)
+---
+<br><br>
+# 📹 Pitch de Apresentação
+[📄 Picth de apresentação](img\doc\PitchInsertV.pdf)
+---
+
+<br><br><br><br><br><br>
+_Esse projeto teve inicio no dia 13 de Agosto de 2026_<br>
+_1° versão entrega conluída no dia 12 de Novembro de 2026_<br>
